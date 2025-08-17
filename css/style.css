@@ -1,0 +1,9 @@
+body {
+    font-family: 'Inconsolata', sans-serif;
+}
+
+@keyframes anjingJump {
+    0% {top: 10px;}
+    50% { top: -50px;}
+    100% {top: 10px;}
+}

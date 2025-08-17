@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Revofun - The Game Developer</title>
+    <meta name="title" content="Revofun - The Game Developer" />
+    <meta name="description" content="Revofun is a small indie game developer dedicated to bringing short, fun, and easy-to-play browser games to busy professionals." />
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Game Developer">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Inge Salim">
+
+    <link rel="icon" type="favicon" href="./assets/favicon-revofun.png">
+    <!-- tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script src="./js/script.js" defer></script>
+</head>
+
+<body>
+<!-- navigation -->
+    <nav id="hamburger" class="fixed bg-white lg:h-[5%] lg:p-[3%_2%] p-[4%] h-[10%] w-full flex items-center justify-between top-0 left-0">
+        <div class="lg:w-[4%] w-[10%]">
+            <img src="./assets/favicon-revofun.png">
+        </div>
+
+        <ul class="hidden lg:block lg:flex w-[70%] font-medium text-xl gap-[5%] justify-end">
+            <li><a href="#profileSection" title="profile">Profile</a></li>
+            <li><a href="#meetSection" title="meet">Meet The Office Pup</a></li>
+            <li><a href="#gamesSection" title="games">Games</a></li>
+            <li><a href="#connectSection" title="connect">Connect</a></li>
+        </ul>
+
+        <div class="w-[10%] cursor-pointer lg:hidden" onclick="hamburgerOpen()">
+            <img src="./assets/hamburger-icon-01.png">
+        </div>
+    </nav>
+
+    <div id="navMobile" class="hidden fixed w-full bg-white top-[8%] p-[4%]">
+        <ul class="flex flex-col font-medium text-xl gap-[5%] justify-end">
+            <li><a href="#profileSection" title="profile">Profile</a></li>
+            <li><a href="#meetSection" title="meet">Meet The Office Pup</a></li>
+            <li><a href="#gamesSection" title="games">Games</a></li>
+            <li><a href="#connectSection" title="connect">Connect</a></li>
+        </ul>
+    </div>
+<!-- end of navigation -->
+
+<!-- header section -->
+    <header class="h-[100vh] flex flex-col p-[4%] gap-[5%] justify-end lg:justify-center lg:flex-row-reverse lg:items-center lg:p-0">
+        <div class="h-[30%] p-[4%] flex flex-col text-center items-center gap-y-[5%] lg:w-[30%]">
+            <h1 class="text-5xl font-bold">Take a Paws From Work!</h1>
+            <h2>Lighthearted online games for stressed office workers, starring our <b>hard-working office dog.</b></h2>
+            <button class="bg-black text-white p-[2%_4%] rounded-full text-xl w-fit">Play Now</button>
+        </div>
+
+        <img class="lg:w-[40%]" src="./assets/banner-1.gif">
+    </header>
+<!-- end of header section -->
+
+    <main>
+<!-- profile section -->   
+    <section id="profileSection">
+        <div class="flex flex-col w-full p-[8%] gap-[5%] lg:items-center lg:flex-row-reverse lg:justify-center">
+            <div class="w-[50%] max-w-[300px] h-fit">
+                <img id="anjingJumpImage" src="./assets/anjing-lompat-2.png" class="relative top-[10px] cursor-pointer " onclick="anjingJump()">
+                <img src="./assets/anjing-lompat-2a.png">
+            </div>
+
+            <div class="lg:w-[50%]">
+                <h3 class="text-2xl"><b>Behind the Office Pup</b></h3><br>
+                <hr class="w-[50px] border-[3px]"><br>
+                <p>Revofun is a small indie game developer dedicated to bringing short, fun, and easy-to-play browser games to busy professionals.</p>
+                <br>
+                <p>We believe that a quick laugh and a few minutes of distraction can reset your mind and help you tackle the rest of your day with more focus.<b> Our mission is to create simple, stress-free online games that you can enjoy in between meetings, during coffee breaks, or whenever you need a moment to breathe.</b></p>
+            </div>
+        </div>
+
+    </section>
+<!-- end of profile section -->
+
+<!-- meet section -->   
+    <section id="meetSection">
+        <div class="flex flex-col w-full p-[8%] gap-[5%] items-end lg:items-center lg:flex-row-reverse lg:justify-center">
+            <img id="anjingWorkImage" src="./assets/anjing-kerja-1.png" class="w-[50%] max-w-[300px] h-fit cursor-pointer" ondblclick="anjingStressed()" >
+
+            <div class="lg:w-[50%]">
+                <h3 class="text-2xl"><b>Meet the Office Pup</b></h3><br>
+                <hr class="w-[50px] border-[3px]"><br>
+                <p>Meet the main character, <b>Anjing</b> the office dog. Works as hard as you do — except when he's slacking off for some playtime.</p>
+                <br>
+            </div>
+        </div>
+    </section>
+<!-- end of meet section -->
+
+<!-- games section -->   
+    <section id="gamesSection">
+
+    </section>
+<!-- end of games section -->
+
+<!-- connect section -->   
+    <section id="connectSection">
+
+    </section>
+<!-- end of connect section -->
+
+    </main>
+    
+</body>
+
+</html>
