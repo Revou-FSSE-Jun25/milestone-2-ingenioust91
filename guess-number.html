@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="title" content="Revofun - The Game Developer" />
+    <meta name="description" content="Revofun is a small indie game developer dedicated to bringing short, fun, and easy-to-play browser games to busy professionals." />
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Game Developer">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Inge Salim">
+
+    <link rel="icon" type="favicon" href="./assets/favicon-revofun.png">
+    <!-- tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+    <!-- sosmed icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script src="./js/guessNumber.js" defer></script>
+</head>
+<body>
+    <section class="flex flex-col justify-center items-center h-[100vh] gap-[2%]">
+        <img id="bossImage" src="./assets/boss-mikir-1.png" class="w-[50%] lg:w-[15%]">
+        <p id="bossText" class="text-2xl">I'm thinking about number....</p>
+        <h1>Guess the number beetween 1 to 100</h1>
+        <input type="number" id="dogNumber" class="border-0 border-b">
+        <button id="buttonGuess" onclick="guessNumber()" class="bg-black text-white p-[5px_15px] rounded-[5px]">Send to boss</button>
+
+        <p id="coba"></p>
+    </section>
+</body>
+</html>

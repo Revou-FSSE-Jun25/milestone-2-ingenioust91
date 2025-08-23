@@ -15,7 +15,7 @@ function anjingJump() {
     const anjingJ = document.getElementById("anjingJumpImage");
   
     //reset animation
-    anjingJ.src = "./assets/anjing-lompat-2.png";
+    anjingJ.src = "./assets/anjing-lompat-2.gif";
     anjingJ.style.animation = "none";      
     anjingJ.offsetHeight; //trigger reflow
     anjingJ.style.animation = "anjingJump 0.5s";
