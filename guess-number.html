@@ -24,10 +24,10 @@
 </head>
 <body>
     <section class="flex flex-col justify-center items-center h-[100vh] gap-[2%]">
-        <img id="bossImage" src="./assets/boss-mikir-1.png" class="w-[50%] lg:w-[15%]">
+        <img id="bossImage" src="./assets/boss-mikir-1.gif" class="w-[50%] lg:w-[15%]">
         <p id="bossText" class="text-2xl">I'm thinking about number....</p>
         <h1>Guess the number beetween 1 to 100</h1>
-        <input type="number" id="dogNumber" class="border-0 border-b">
+        <input type="text" id="dogNumber" class="border-0 border-b w-[20%] text-center" oninput="validateInput()">
         <button id="buttonGuess" onclick="guessNumber()" class="bg-black text-white p-[5px_15px] rounded-[5px]">Send to boss</button>
 
         <p id="coba"></p>
