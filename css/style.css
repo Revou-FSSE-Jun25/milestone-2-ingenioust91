@@ -7,3 +7,13 @@ body {
     50% { top: -50px;}
     100% {top: 10px;}
 }
+
+#buttonPlayNow:hover, #buttonGuess:hover {
+    left: 4px;
+    top : 4px
+}
+
+#buttonPlayNow:hover::after, #buttonGuess:hover::after {
+    left: 0;
+    top : 0;
+}

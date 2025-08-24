@@ -58,7 +58,13 @@
         <div class="h-[30%] p-[4%] flex flex-col text-center items-center gap-y-[5%] lg:w-[30%]">
             <h1 class="text-5xl font-bold">Take a Paws From Work!</h1>
             <h2>Lighthearted online games for stressed office workers, starring our <b>hard-working office dog.</b></h2>
-            <button class="bg-black text-white p-[2%_4%] rounded-full text-xl w-fit">Play Now</button>
+            
+            <a class="text-xl text-white" href="#gamesSection">
+                <div id="buttonPlayNow" class="bg-black p-[5px_20px] rounded-[5px] relative after:absolute after:border after:border-black after:left-[4px] after:rounded-[5px] after:w-[120px] after:h-[38px]">
+                Play Now
+                </div>
+            </a>
+
         </div>
 
         <img class="lg:w-[40%]" src="./assets/banner-1.gif">
@@ -105,26 +111,27 @@
     <section id="gamesSection">
         <h3 class="text-2xl text-center"><b>Game List</b></h3><br>
 
-        <section class="flex flex-row justify-center items-center">
-            <div class="border-1">
-                <img>
+        <section class="flex flex-row justify-center items-center text-center gap-[10px]">
+            <a class="border-1 rounded-[10px] flex flex-col w-[30%] items-center"
+            href="./guess-number.html">
+                <img src="./assets/boss-mikir-1.gif" class="w-[75%]">
                 <h4><b>Anjing Suit</b></h4>
                 <p>Win this game like you win your arguments in meetings!</p>
-            </div>
+            </a>
 
-            <div class="border-1">
-            <a href="./guess-number.html">
-                <img>
+            <a class="border-1 rounded-[10px] flex flex-col w-[30%] items-center"
+            href="./guess-number.html">
+                <img src="./assets/boss-mikir-1.gif" class="w-[75%]">
                 <h4><b>Anjing Mikir</b></h4>
                 <p>Guess what your boss thinking before he snaps!</p>
             </a>
-            </div>
 
-            <div class="border-1">
-                <img>
+            <a class="border-1 rounded-[10px] flex flex-col w-[30%] items-center"
+            href="./guess-number.html">
+                <img src="./assets/boss-mikir-1.gif" class="w-[75%]">
                 <h4><b>Anjing Kabur</b></h4>
                 <p>Chase your teamates that skip their work again</p>
-            </div>
+            </a>
         </section>
     </section>
 <!-- end of games section -->

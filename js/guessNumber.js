@@ -17,10 +17,14 @@ function guessNumber() {
     return array[index];
     }
 
-    let line = ""
+    let line;
     let ChangeimageBoss;
 
-    if (bossNumber > dogNumber.value) {
+    if (dogNumber.value == "") {
+        line = "Give me something";
+        ChangeimageBoss = getRandomLine(imgStillFalse);
+    }
+    else if (bossNumber > dogNumber.value) {
         line = getRandomLine(tooLow);
         ChangeimageBoss = getRandomLine(imgStillFalse);
     }
@@ -38,14 +42,14 @@ function guessNumber() {
 }
 
 function validateInput() {
-    let input = document.getElementById("dogNumber").value;
+    let input = dogNumber.value;
     let numberInput = parseInt(input.trim())
 
     if (isNaN(numberInput)) {
         document.getElementById("dogNumber").value = "";
     }
 
-    if (numberInput > 100) {
+    if (numberInput > 100 || numberInput == 0) {
         bossText.textContent = "I said between 1 to 100!";
     }
 }

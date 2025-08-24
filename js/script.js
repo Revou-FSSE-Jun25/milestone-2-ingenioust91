@@ -40,3 +40,5 @@ function anjingStressed() {
         clickCount = 0;
     }
 }
+
+const buttonPlayNow = document.getElementById("buttonPlayNow");
