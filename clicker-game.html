@@ -20,20 +20,12 @@
     <!-- css -->
     <link rel="stylesheet" href="./css/style.css">
 
-    <script src="./js/guessNumber.js" defer></script>
+    <script src="./js/clickerGame.js" defer></script>
 </head>
-<body>
-    <section class="flex flex-col justify-center items-center h-[100vh] gap-[2%]">
-        <img id="bossImage" src="./assets/boss-mikir-1.gif" class="w-[50%] lg:w-[15%]">
-        <p id="bossText" class="text-2xl">I'm thinking about number....</p>
-        <h1>Guess the number beetween 1 to 100</h1>
-        <input type="text" id="dogNumber" class="border-0 border-b w-[20%] text-center" oninput="validateInput()">
-        
-        <div class="text-xl text-white">
-            <button id="buttonGuess" onclick="guessNumber()" class="bg-black p-[5px_20px] rounded-[5px] relative after:absolute after:border after:border-black after:left-[4px] after:rounded-[5px] after:w-[160px] after:h-[38px] cursor-pointer">Send to boss</button>
-        </div>
 
-        <p id="coba"></p>
-    </section>
+<body class="flex flex-col justify-center items-center h-[100dvh]">
+    <h1>Chase your teamates that skip their work again!</h1>
+    <main class="w-[90dvw] h-[90dvh] border-1 text-center relative">
+    </main>
 </body>
 </html>
