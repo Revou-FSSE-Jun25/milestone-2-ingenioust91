@@ -4,12 +4,22 @@ const mainWidth = main.clientWidth;
 const mainHeight = main.clientHeight;
 
 let imgMates = document.createElement("img");
-imgMates.style.cursor = "pointer";
 imgMates.style.position = "absolute";
-imgMates.src = "./assets/anjing-kerja-1.png";
 
-function randomPosition() {
-    imgMates.style.width = "20%"
+let cursorHand = document.getElementById("cursorHand")
+cursorHand.style.zIndex = 5;
+imgMates.src = "./assets/mates-1.png";
+
+document.addEventListener("mousemove", (e) => {
+    cursorHand.style.left = (e.clientX - 100) + "px";
+    cursorHand.style.top = (e.clientY - 70) + "px";
+})
+
+let score = 0;
+
+function randomPosition(timer) {
+    setInterval(function(){
+    imgMates.src = "./assets/mates-1.png";
     const imgWidth = imgMates.clientWidth;
     const imgHeight = imgMates.clientHeight;
 
@@ -18,10 +28,18 @@ function randomPosition() {
 
     imgMates.style.left = `${matesXPosition}px`;
     imgMates.style.top = `${matesYPosition}px`;
+    }, timer)
 }
-imgMates.onload = () => {
-randomPosition();}
 
-imgMates.addEventListener("click", randomPosition);
+
+imgMates.onload = () => {
+    imgMates.style.width = "10%"
+    randomPosition(2000);}
+
+imgMates.addEventListener("click", function(){
+    score++;
+    imgMates.src = "./assets/mates-2.png";
+    document.getElementById("score").innerHTML = `Score : ${score}`
+});
 
 main.appendChild(imgMates);
