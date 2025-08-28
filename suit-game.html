@@ -20,27 +20,26 @@
     <!-- css -->
     <link rel="stylesheet" href="./css/style.css">
 
-    <script src="./js/clickerGame.js" defer></script>
+    <script src="./js/suitGame.js" defer></script>
 </head>
+<body>
+    <main class="h-[100vh] flex flex-col items-center justify-center gap-2">
+        <img id="imgEnemy" src="./assets/mates-1.png" class="w-[30%]">
+        <h1 class="text-xl">question</h1>
 
-<body class="w-[100vw] h-[100vh]">
+        <div class="flex gap-[2%] justify-center w-full text-center leading-4">
+            <section id="rock" class="border-1 rounded-[5px] w-[20%] h-[100px] flex items-center justify-center cursor-pointer">
+                rock
+            </section>
 
-    <main class="flex flex-col justify-center items-center h-[100vh]">
-        <section class="text-center">
-            <h1 class="text-xl">Chase your teamates before times up!</h1>
-            <div class="flex justify-center items-center gap-[5px]">
-                <h2 class="text-xl"><b>Time Left :</b></h2>
-                <h2 id="countDown" class="text-3xl">60</h2>
-            </div>
-        </section>
+            <section id="paper" class="border-1 rounded-[5px] w-[20%] h-[100px] flex items-center justify-center cursor-pointer">
+                paper
+            </section>
 
-        <section class="w-[90dvw] h-[90dvh]  text-center relative">
-            <img src="./assets/bg-clicker-1.png" class="absolute pointer-events-none h-[100%]">
-            <img src="./assets/bg-clicker-2.png" class="absolute z-3 pointer-events-none h-[100%]">
-            <img src="./assets/cursor-hand.png" class="w-[5%] absolute pointer-events-none" id="cursorHand">
-        </section>
-
-        <h2 id="score" class="text-3xl"><b>Score : 0</b></h2>
+             <section id="scissor" class="border-1 rounded-[5px] w-[20%] h-[100px] flex items-center justify-center cursor-pointer">
+                scissor
+            </section>
+        </div>
     </main>
 </body>
 </html>

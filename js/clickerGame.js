@@ -16,6 +16,20 @@ document.addEventListener("mousemove", (e) => {
 })
 
 let score = 0;
+let timeLeft = 60;
+
+const countDown = document.getElementById("countDown")
+
+setInterval(function timerCountDown(){
+    countDown.textContent = timeLeft;
+    timeLeft--;
+
+    if (timeLeft < 0) {
+        clearInterval(timerCountDown);
+        countDown.textContent = "waktu habis";
+        alert("waktu habis")
+    }
+},1000)
 
 function randomPosition(timer) {
     setInterval(function(){
@@ -33,8 +47,8 @@ function randomPosition(timer) {
 
 
 imgMates.onload = () => {
-    imgMates.style.width = "10%"
-    randomPosition(2000);}
+    imgMates.style.width = "8%";
+}
 
 imgMates.addEventListener("click", function(){
     score++;
@@ -42,4 +56,6 @@ imgMates.addEventListener("click", function(){
     document.getElementById("score").innerHTML = `Score : ${score}`
 });
 
+
+randomPosition(1000);
 main.appendChild(imgMates);
