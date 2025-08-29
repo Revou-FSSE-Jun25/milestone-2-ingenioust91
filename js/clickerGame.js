@@ -1,15 +1,17 @@
 import { initializeLevel } from "./selectLevel.js";
 initializeLevel(callBackLevel);
 
+import {getScore} from "./score.js"
+
 let timeLeft;
 
 function callBackLevel(level) {
     if (level === "junior") {
-        timeLeft = 120;
+        timeLeft = 3;
         randomPosition(1000);
     } else {
         timeLeft = 60;
-        randomPosition(500);
+        randomPosition(750);
     }
 }
 
@@ -33,14 +35,15 @@ let score = 0;
 
 const countDown = document.getElementById("countDown")
 
-setInterval(function timerCountDown(){
+let timerCountDown = setInterval(function(){
     countDown.textContent = timeLeft;
     timeLeft--;
 
     if (timeLeft < 0) {
         clearInterval(timerCountDown);
+        clearInterval(randomPosition);
         countDown.textContent = "TIME'S UP!";
-        timesUp(score);
+        getScore(score);
     }
 },1000)
 
