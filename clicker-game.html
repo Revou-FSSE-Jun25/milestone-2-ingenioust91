@@ -20,12 +20,13 @@
     <!-- css -->
     <link rel="stylesheet" href="./css/style.css">
 
-    <script src="./js/clickerGame.js" defer></script>
+    <script type="module" src="./js/clickerGame.js" defer></script>
 </head>
 
 <body class="w-[100vw] h-[100vh]">
-
-    <main class="flex flex-col justify-center items-center h-[100vh]">
+    <header>
+    </header>
+    <main class="invisible flex flex-col justify-center items-center h-[100vh]">
         <section class="text-center">
             <h1 class="text-xl">Chase your teamates before times up!</h1>
             <div class="flex justify-center items-center gap-[5px]">
@@ -34,7 +35,7 @@
             </div>
         </section>
 
-        <section class="w-[90dvw] h-[90dvh]  text-center relative">
+        <section class="w-[90dvw] h-[90dvh] text-center relative">
             <img src="./assets/bg-clicker-1.png" class="absolute pointer-events-none h-[100%]">
             <img src="./assets/bg-clicker-2.png" class="absolute z-3 pointer-events-none h-[100%]">
             <img src="./assets/cursor-hand.png" class="w-[5%] absolute pointer-events-none" id="cursorHand">

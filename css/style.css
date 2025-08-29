@@ -8,12 +8,32 @@ body {
     100% {top: 10px;}
 }
 
-#buttonPlayNow:hover, #buttonGuess:hover {
+#buttonPlayNow, #buttonGuess, #buttonJunior, #buttonSenior {
+    background-color: black;
+    color: white;
+    font-size: 1.25rem;
+    padding: 5px 20px;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+#buttonPlayNow::after, #buttonGuess::after, #buttonJunior::after, #buttonSenior::after {
+     position : absolute;
+     border : 1px solid black;
+     left : 4px;
+     border-radius: 5px;
+     content: "";
+     width: 100%;
+     height: 100%;
+}
+
+#buttonPlayNow:hover, #buttonGuess:hover, #buttonJunior:hover, #buttonSenior:hover {
     left: 4px;
     top : 4px
 }
 
-#buttonPlayNow:hover::after, #buttonGuess:hover::after {
+#buttonPlayNow:hover::after, #buttonGuess:hover::after, #buttonJunior:hover::after, #buttonSenior:hover::after {
     left: 0;
     top : 0;
 }

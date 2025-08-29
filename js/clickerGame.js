@@ -1,3 +1,17 @@
+import { initializeLevel } from "./selectLevel.js";
+initializeLevel(callBackLevel);
+
+let timeLeft;
+
+function callBackLevel(level) {
+    if (level === "junior") {
+        timeLeft = 120;
+        randomPosition(1000);
+    } else {
+        timeLeft = 60;
+        randomPosition(500);
+    }
+}
 
 let main = document.getElementsByTagName("main")[0];
 const mainWidth = main.clientWidth;
@@ -16,7 +30,6 @@ document.addEventListener("mousemove", (e) => {
 })
 
 let score = 0;
-let timeLeft = 60;
 
 const countDown = document.getElementById("countDown")
 
@@ -26,8 +39,8 @@ setInterval(function timerCountDown(){
 
     if (timeLeft < 0) {
         clearInterval(timerCountDown);
-        countDown.textContent = "waktu habis";
-        alert("waktu habis")
+        countDown.textContent = "TIME'S UP!";
+        timesUp(score);
     }
 },1000)
 
@@ -38,10 +51,11 @@ function randomPosition(timer) {
     const imgHeight = imgMates.clientHeight;
 
     const matesXPosition = Math.floor(Math.random() * (mainWidth - imgWidth));
-    const matesYPosition = Math.floor(Math.random() * (mainHeight - imgHeight));
+    const matesYPosition = Math.floor(Math.random() * (mainHeight - imgHeight))
 
     imgMates.style.left = `${matesXPosition}px`;
     imgMates.style.top = `${matesYPosition}px`;
+
     }, timer)
 }
 
@@ -56,6 +70,4 @@ imgMates.addEventListener("click", function(){
     document.getElementById("score").innerHTML = `Score : ${score}`
 });
 
-
-randomPosition(1000);
 main.appendChild(imgMates);
