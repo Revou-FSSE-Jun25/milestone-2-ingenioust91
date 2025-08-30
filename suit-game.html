@@ -20,26 +20,39 @@
     <!-- css -->
     <link rel="stylesheet" href="./css/style.css">
 
-    <script src="./js/suitGame.js" defer></script>
+    <script type="module" src="./js/suitGame.js" defer></script>
 </head>
 <body>
-    <main class="h-[100vh] flex flex-col items-center justify-center gap-2">
-        <img id="imgEnemy" src="./assets/mates-1.png" class="w-[30%]">
-        <h1 class="text-xl">question</h1>
+    <main class="h-[100vh] flex flex-col items-center justify-center items-center gap-2">
+        <div class="relative p-[2%] flex items-center justify-center">
+            <img src="./assets/bubble-chat-1.png" class="absolute w-[100%]">
+            <h1 class="text-xl text-center">question</h1>
+        </div>
+        
+        <section class="flex w-[50%] justify-center gap-2">
+            <img id="imgMates" src="./assets/mates-ask.png" class="w-[40%]" >
+            <img id="imgDog" src="./assets/anjing-kerja-1.png" class="w-[50%]" >
+        </section>
 
-        <div class="flex gap-[2%] justify-center w-full text-center leading-4">
-            <section id="rock" class="border-1 rounded-[5px] w-[20%] h-[100px] flex items-center justify-center cursor-pointer">
+        <div class="relative flex flex-col lg:flex-row gap-2 justify-center items-center w-full text-center leading-4">
+            <img src="./assets/bubble-chat-2.png" class="absolute w-[70%] pointer-events-none">
+            
+            <section id="rock" class="border-1 rounded-[5px] w-[70%] lg:w-[20%] h-[50%] p-[2%] flex items-center justify-center cursor-pointer">
                 rock
             </section>
 
-            <section id="paper" class="border-1 rounded-[5px] w-[20%] h-[100px] flex items-center justify-center cursor-pointer">
+            <section id="paper" class="border-1 rounded-[5px] w-[70%] lg:w-[20%] h-[50%] p-[2%] flex items-center justify-center cursor-pointer">
                 paper
             </section>
 
-             <section id="scissor" class="border-1 rounded-[5px] w-[20%] h-[100px] flex items-center justify-center cursor-pointer">
+             <section id="scissor" class="border-1 rounded-[5px] w-[70%] lg:w-[20%] h-[50%] p-[2%] flex items-center justify-center cursor-pointer">
                 scissor
             </section>
         </div>
+
+        <h2 id="isWin" class="text-3xl text-center"> </h1>
+
+        <button id="buttonNext">NEXT</button>
     </main>
 </body>
 </html>

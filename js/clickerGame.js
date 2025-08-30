@@ -1,13 +1,13 @@
-import { initializeLevel } from "./selectLevel.js";
+import { initializeLevel } from "../utils/selectLevel.js";
 initializeLevel(callBackLevel);
 
-import {getScore} from "./score.js"
+import {getScore} from "../utils/score.js"
 
 let timeLeft;
 
 function callBackLevel(level) {
     if (level === "junior") {
-        timeLeft = 3;
+        timeLeft = 100;
         randomPosition(1000);
     } else {
         timeLeft = 60;

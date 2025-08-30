@@ -118,18 +118,25 @@ const listQuestion = [question1, question2, question3, question4]
 const rock = document.getElementById("rock");
 const scissor = document.getElementById("scissor");
 const paper = document.getElementById("paper");
-const imgEnemy = document.getElementById("imgEnemy");
+const imgMates = document.getElementById("imgMates");
+const imgDog = document.getElementById("imgDog");
+const isWin = document.getElementById("isWin");
+const buttonNext = document.getElementById("buttonNext");
 
 let idx;
 let compRandom;
+let winCount = 0;
+
+import {getArray} from '../utils/randomArray.js'
+
+buttonNext.addEventListener("click", function() {
+	winCount = winCount;
+	startGame();
+});
 
 function startGame() {
-const getArray = (arrayName) => {
-    const index = Math.floor(Math.random() * arrayName.length);
-    return arrayName[index];
-}
-
 idx = getArray(listQuestion);
+console.log(idx)
 compRandom = Math.floor(Math.random() * 3);
 
 document.getElementsByTagName("h1")[0].innerHTML = idx[0].quest;
@@ -158,22 +165,25 @@ paper.addEventListener("click", function() {
 	findingWinner(userAnswer);
 })
 
-let winCount = 0;
-
 function findingWinner (userAnswer) {
 	if (compRandom === userAnswer) {
-		console.log('DRAW')
+		isWin.textContent = "DRAW";
+		imgMates.src = "./assets/mates-draw.png";
 	} else if ((compRandom-userAnswer + 3) % 3 === 1){
-		console.log('YOU loose')
+		isWin.textContent = "You Lose!";
+		imgMates.src = "./assets/mates-win.png";
+		imgDog.src = "./assets/anjing-kerja-2.png";
 		winCount--;
 	} else {
-		console.log('YOU win')
+		isWin.textContent = "You Win!";
+		imgMates.src = "./assets/mates-lose.png";
 		winCount++;
 	}
+
+	//testing
 	console.log('YOU:', userAnswer)
 	console.log('COMP:',compRandom)
 	console.log(winCount)
-	
 }
 
 

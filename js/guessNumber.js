@@ -1,7 +1,9 @@
-import { initializeLevel } from "./selectLevel.js";
+import { initializeLevel } from "../utils/selectLevel.js";
 initializeLevel(callBackLevel);
 
-import {getScore} from "./score.js"
+import {getScore} from "../utils/score.js"
+
+import {getArray} from '../utils/randomArray.js'
 
 let bossNumber;
 let score = 10;
@@ -41,31 +43,26 @@ dogNumber.addEventListener("input", function() {
 } )
 
 buttonGuess.addEventListener("click", function() {
-    const getRandomLine = (array) => {
-        const index = Math.floor(Math.random() * array.length);
-        return array[index];
-    }
-
     let line;
     let ChangeimageBoss;
 
     if (dogNumber.value == "") {
         line = "Give me something";
-        ChangeimageBoss = getRandomLine(imgStillFalse);
+        ChangeimageBoss = getArray(imgStillFalse);
     }
     else if (bossNumber > dogNumber.value) {
-        line = getRandomLine(tooLow);
-        ChangeimageBoss = getRandomLine(imgStillFalse);
+        line = getArray(tooLow);
+        ChangeimageBoss = getArray(imgStillFalse);
         score--;
     }
     else if (bossNumber < dogNumber.value) {
-        line = getRandomLine(tooHigh);
-        ChangeimageBoss = getRandomLine(imgStillFalse);
+        line = getArray(tooHigh);
+        ChangeimageBoss = getArray(imgStillFalse);
         score--;
     }
     else {
-        line = getRandomLine(right);
-        ChangeimageBoss = getRandomLine(imgRight);
+        line = getArray(right);
+        ChangeimageBoss = getArray(imgRight);
         getScore(score, "guessNumber")
     }
 
