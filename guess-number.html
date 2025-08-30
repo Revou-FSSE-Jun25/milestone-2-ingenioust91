@@ -20,20 +20,22 @@
     <!-- css -->
     <link rel="stylesheet" href="./css/style.css">
 
-    <script src="./js/guessNumber.js" defer></script>
+    <script type="module" src="./js/guessNumber.js" defer></script>
 </head>
 <body>
-    <section class="flex flex-col justify-center items-center h-[100vh] gap-[2%]">
+    <header>
+    </header>
+
+    <main class="invisible flex flex-col justify-center items-center h-[100vh] gap-[2%]">
         <img id="bossImage" src="./assets/boss-mikir-1.gif" class="w-[50%] lg:w-[15%]">
         <p id="bossText" class="text-2xl">I'm thinking about number....</p>
         <h1>Guess the number beetween 1 to 100</h1>
-        <input type="text" id="dogNumber" class="border-0 border-b w-[20%] text-center" oninput="validateInput()">
         
-        <div>
-            <button id="buttonGuess" onclick="guessNumber()">Send to boss</button>
-        </div>
+        <form id="formGuess" class="flex flex-col gap-[10%] w-[25%] items-center">
+            <input type="text" id="dogNumber" class="border-0 w-[90%] border-b text-center">
+            <button id="buttonGuess" class="w-[50%]">Send to boss</button>
+        </form>
 
-        <p id="coba"></p>
-    </section>
+    </main>
 </body>
 </html>

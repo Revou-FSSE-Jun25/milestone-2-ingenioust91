@@ -32,23 +32,23 @@ document.addEventListener("mousemove", (e) => {
 })
 
 let score = 0;
-
 const countDown = document.getElementById("countDown")
+let randomIntervalId;
 
-let timerCountDown = setInterval(function(){
+let timerId = setInterval(function(){
     countDown.textContent = timeLeft;
     timeLeft--;
 
     if (timeLeft < 0) {
-        clearInterval(timerCountDown);
-        clearInterval(randomPosition);
+        clearInterval(timerId);
+        clearInterval(randomIntervalId);
         countDown.textContent = "TIME'S UP!";
-        getScore(score);
+        getScore(score, "clickerGame");
     }
 },1000)
 
 function randomPosition(timer) {
-    setInterval(function(){
+    randomIntervalId = setInterval(function(){
     imgMates.src = "./assets/mates-1.png";
     const imgWidth = imgMates.clientWidth;
     const imgHeight = imgMates.clientHeight;

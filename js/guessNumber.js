@@ -1,20 +1,49 @@
-let bossNumber = Math.floor(Math.random() * 100) + 1;
-let bossText = document.getElementById("bossText");
-let bossImage = document.getElementById("bossImage");
-document.getElementById("coba").innerHTML = bossNumber;
+import { initializeLevel } from "./selectLevel.js";
+initializeLevel(callBackLevel);
+
+import {getScore} from "./score.js"
+
+let bossNumber;
+let score = 10;
+const buttonGuess = document.getElementById("buttonGuess");
+const bossText = document.getElementById("bossText");
+const bossImage = document.getElementById("bossImage");
 let dogNumber = document.getElementById("dogNumber");
+const formInput = document.getElementById("formInput");
 dogNumber.value = "";
 
-dogNumber.addEventListener('keypress', function(event) {
-    if (event.key === 'Enter') {
-        guessNumber();
+function callBackLevel(level) {
+    if (level === "junior") {
+        bossNumber = Math.floor(Math.random() * 100) + 1;
+    } else {
+        bossNumber = Math.floor(Math.random() * 200) + 1;
     }
+
+    console.log(bossNumber);
+}
+
+formGuess.addEventListener("submit", function(event) {
+    event.preventDefault();
+    guessNumber();
 })
 
-function guessNumber() {
+dogNumber.addEventListener("input", function() {
+    let input = dogNumber.value;
+    let numberInput = parseInt(input.trim())
+
+    if (isNaN(numberInput)) {
+        document.getElementById("dogNumber").value = "";
+    }
+
+    if (numberInput > 100 || numberInput == 0) {
+        bossText.textContent = "I said between 1 to 100!";
+    }
+} )
+
+buttonGuess.addEventListener("click", function() {
     const getRandomLine = (array) => {
-    const index = Math.floor(Math.random() * array.length);
-    return array[index];
+        const index = Math.floor(Math.random() * array.length);
+        return array[index];
     }
 
     let line;
@@ -27,32 +56,23 @@ function guessNumber() {
     else if (bossNumber > dogNumber.value) {
         line = getRandomLine(tooLow);
         ChangeimageBoss = getRandomLine(imgStillFalse);
+        score--;
     }
     else if (bossNumber < dogNumber.value) {
         line = getRandomLine(tooHigh);
         ChangeimageBoss = getRandomLine(imgStillFalse);
+        score--;
     }
     else {
         line = getRandomLine(right);
         ChangeimageBoss = getRandomLine(imgRight);
+        getScore(score, "guessNumber")
     }
 
     bossText.textContent = line;
     bossImage.src = ChangeimageBoss;
-}
+})
 
-function validateInput() {
-    let input = dogNumber.value;
-    let numberInput = parseInt(input.trim())
-
-    if (isNaN(numberInput)) {
-        document.getElementById("dogNumber").value = "";
-    }
-
-    if (numberInput > 100 || numberInput == 0) {
-        bossText.textContent = "I said between 1 to 100!";
-    }
-}
 
 const tooLow = [
     "Too low! Come on, that's not complicated",
