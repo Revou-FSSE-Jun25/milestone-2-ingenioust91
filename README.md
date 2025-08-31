@@ -42,6 +42,7 @@
 
 ---
 ## Project Structure
+```
  .
  ├── assets
  ├── css
@@ -59,6 +60,7 @@
  ├── guess-number.html
  ├── index.html
  └── suit-game.html
+```
 
 ---
 ## Tech Stack
