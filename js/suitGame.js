@@ -1,4 +1,4 @@
-//index 0: scissor 1:rock 2:paper
+//index 0:scissor 1:rock 2:paper
 const question1 = [{
     quest: 'Aku pikir bolanya di tim kakak.',
 
