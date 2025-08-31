@@ -4,7 +4,7 @@
 **Revofun** is a casual web-based game collection created for employees who need a quick break from work stress. Each game is designed with storylines inspired by common workplace situations, making them both fun and relatable during office hours.
 
 ## Game Collection
-1. Anjing Meeting
+**1. Anjing Meeting**
 - **Theme:** Office meetings that never seem to end.  
 - **Storyline:** You’re in a meeting where teammates keep throwing questions and counterarguments. Just like in real meetings, your answer might not be the final word—others will push back.  
 - **Gameplay:** Based on *Rock-Paper-Scissors*.  
@@ -14,7 +14,7 @@
   4. Winner is decided by rock-paper-scissors rules. 
 
 ---
-2. Anjing Mikir
+**2. Anjing Mikir**
 - **Theme:** Dealing with the boss whose desire can't be figured out.  
 - **Storyline:** Your boss never gives a straight answer, and you must keep guessing until you figure out what they want.  
 - **Gameplay:** Based on a *Number Guessing Game*.  
@@ -24,7 +24,7 @@
   4. Find the boss’s number as fast as you can!  
 
 ---
-3. Anjing Kabur
+**3. Anjing Kabur**
 - **Theme:** Chasing teammates who dodge responsibilities.  
 - **Storyline:** Everyone has that one teammate who always slips away from tasks, your mission is to catch them!  
 - **Gameplay:** A *Clicker Game*.  
@@ -42,24 +42,24 @@
 
 ---
 ## Project Structure
-> Milestone 2 REVOU
-> .
-> ├── assets
-> ├── css
->    └── style.css
-> ├── js
->    ├── clickerGame.js
->    ├── guessNumber.js
->    ├── script.js
->    └── suitGame.js
-> ├── utils
->    ├── randomArray.js
->    ├── score.js
->    └── selectLevel.js
-> ├── clicker-game.html
-> ├── guess-number.html
-> ├── index.html
-> └── suit-game.html
+```text
+ .
+ ├── assets
+ ├── css
+    └── style.css
+ ├── js
+    ├── clickerGame.js
+    ├── guessNumber.js
+    ├── script.js
+    └── suitGame.js
+ ├── utils
+    ├── randomArray.js
+    ├── score.js
+    └── selectLevel.js
+ ├── clicker-game.html
+ ├── guess-number.html
+ ├── index.html
+ └── suit-game.html
 
 ---
 ## Tech Stack
