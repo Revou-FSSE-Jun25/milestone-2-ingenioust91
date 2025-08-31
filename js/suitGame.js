@@ -135,16 +135,17 @@ buttonNext.addEventListener("click", function() {
 });
 
 function startGame() {
-idx = getArray(listQuestion);
-console.log(idx)
-compRandom = Math.floor(Math.random() * 3);
+	imgMates.src = "./assets/mates-ask.png";
+	imgDog.src = "./assets/anjing-kerja-1.png";
+	idx = getArray(listQuestion);
+	compRandom = Math.floor(Math.random() * 3);
 
-document.getElementsByTagName("h1")[0].innerHTML = idx[0].quest;
-scissor.innerHTML = idx[0].user[0]
-rock.innerHTML = idx[0].user[1]
-paper.innerHTML = idx[0].user[2]
+	document.getElementsByTagName("h1")[0].innerHTML = idx[0].quest;
+	scissor.innerHTML = idx[0].user[0]
+	rock.innerHTML = idx[0].user[1]
+	paper.innerHTML = idx[0].user[2]
 
-return idx;
+	return idx;
 }
 
 scissor.addEventListener("click", function() {

@@ -38,8 +38,8 @@ body {
 
 #buttonPlayNow:hover::after, #buttonGuess:hover::after,
 #buttonJunior:hover::after, #buttonSenior:hover::after,
-#buttonPlayAgain:hover::after, #buttonBack:hover::after
+#buttonPlayAgain:hover::after, #buttonBack:hover::after,
 #buttonNext:hover::after {
-    left: 0;
-    top : 0;
+    left: 0px;
+    top : 0px;
 }

@@ -5,28 +5,31 @@ import {getScore} from "../utils/score.js"
 
 import {getArray} from '../utils/randomArray.js'
 
-let bossNumber;
-let score = 10;
+let bossNumber = Math.floor(Math.random() * 100) + 1;
+let chance;
+let miss = 0;
+
 const buttonGuess = document.getElementById("buttonGuess");
 const bossText = document.getElementById("bossText");
 const bossImage = document.getElementById("bossImage");
 let dogNumber = document.getElementById("dogNumber");
 const formInput = document.getElementById("formInput");
+const numberOfChance = document.getElementById("numberOfChance");
 dogNumber.value = "";
 
 function callBackLevel(level) {
     if (level === "junior") {
-        bossNumber = Math.floor(Math.random() * 100) + 1;
+        chance = 10;
     } else {
-        bossNumber = Math.floor(Math.random() * 200) + 1;
+        chance = 5;
     }
 
+    getChance(chance);
     console.log(bossNumber);
 }
 
 formGuess.addEventListener("submit", function(event) {
     event.preventDefault();
-    guessNumber();
 })
 
 dogNumber.addEventListener("input", function() {
@@ -46,6 +49,10 @@ buttonGuess.addEventListener("click", function() {
     let line;
     let ChangeimageBoss;
 
+    if (bossNumber == dogNumber.value || chance == 1) {
+        getScore(miss, "guessNumber")
+    }
+
     if (dogNumber.value == "") {
         line = "Give me something";
         ChangeimageBoss = getArray(imgStillFalse);
@@ -53,23 +60,24 @@ buttonGuess.addEventListener("click", function() {
     else if (bossNumber > dogNumber.value) {
         line = getArray(tooLow);
         ChangeimageBoss = getArray(imgStillFalse);
-        score--;
-    }
-    else if (bossNumber < dogNumber.value) {
-        line = getArray(tooHigh);
-        ChangeimageBoss = getArray(imgStillFalse);
-        score--;
+        chance--;
+        miss++;
+        getChance(chance);
     }
     else {
-        line = getArray(right);
-        ChangeimageBoss = getArray(imgRight);
-        getScore(score, "guessNumber")
+        line = getArray(tooHigh);
+        ChangeimageBoss = getArray(imgStillFalse);
+        chance--;
+        miss++;
+        getChance(chance);
     }
-
+        
     bossText.textContent = line;
     bossImage.src = ChangeimageBoss;
 })
 
+function getChance(chance){
+numberOfChance.textContent = `You have ${chance} chances left`}
 
 const tooLow = [
     "Too low! Come on, that's not complicated",
@@ -83,11 +91,11 @@ const tooHigh = [
     "Nope, that’s too much. Revise it."
 ]
 
-const right = [
-    "Finally. I know my instructions are clear.",
-    "Good. But I expect faster.",
-    "OK."
-]
+// const right = [
+//     "Finally. I know my instructions are clear.",
+//     "Good. But I expect faster.",
+//     "OK."
+// ]
 
 const imgStillFalse = [
     "./assets/boss-mikir-false-1.png",
@@ -97,7 +105,7 @@ const imgStillFalse = [
 ]
 
 
-const imgRight = [
-    "./assets/boss-mikir-right-1.png",
-    "./assets/boss-mikir-right-2.png"
-]
+// const imgRight = [
+//     "./assets/boss-mikir-right-1.png",
+//     "./assets/boss-mikir-right-2.png"
+// ]

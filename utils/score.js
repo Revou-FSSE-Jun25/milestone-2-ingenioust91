@@ -38,11 +38,22 @@ div.style.gap = "2%"
 h2.style.textAlign = "center"
 h2.style.fontFamily = "'Inconsolata', sans-serif"
 h2.style.fontSize = "1.25rem"
-h2.textContent = "GAME OVER! Your score :"
 
-p2.textContent = score;
 p2.style.fontSize = "2rem"
 p2.style.textAlign = "center"
+
+switch (game) {
+        case "clickerGame" :
+        {   h2.textContent = "GAME OVER! You've chase "
+            p2.textContent = `${score} teammates`;
+        }
+        break;
+        case "guessNumber" :
+        {   h2.textContent = "GAME OVER! You have already wasted"
+            p2.textContent = `${score} chances`;
+        }
+        break;
+    }
 
 div2.style.display = "flex"
 div2.style.alignItems = "center"
