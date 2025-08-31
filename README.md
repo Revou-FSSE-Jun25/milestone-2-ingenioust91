@@ -42,7 +42,6 @@
 
 ---
 ## Project Structure
-```text
  .
  ├── assets
  ├── css
