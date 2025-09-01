@@ -26,9 +26,9 @@
     <header>
     </header>
 
-    <main class="invisible flex flex-col justify-center items-center h-[100vh] gap-[2%]">
+    <main class="invisible flex flex-col justify-center relative items-center h-[100vh] gap-[1%]">
         <img id="bossImage" src="./assets/boss-mikir-1.gif" class="w-[50%] lg:w-[15%]">
-        <p id="bossText" class="text-2xl">I'm thinking about number....</p>
+        <p id="bossText" class="text-2xl ">I'm thinking about number....</p>
         <h1>Guess the number beetween 1 to 100</h1>
 
         <h2 id="numberOfChance"></h2>
@@ -37,6 +37,8 @@
             <input type="text" id="dogNumber" class="border-0 w-[90%] border-b text-center">
             <button id="buttonGuess" class="w-[50%]">Send to boss</button>
         </form>
+
+        <img src="./assets/bg-number.png" class="absolute object-fit max-w-[60%] z-[-1]">
 
     </main>
 </body>

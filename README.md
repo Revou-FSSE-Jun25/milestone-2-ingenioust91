@@ -34,10 +34,13 @@
 
 ---
 ## Features  
-- Simple and fun gameplay for quick office breaks.   
-- Three different game modes: Rock-Paper-Scissors, Number Guessing, and Clicker Game.  
-- Works directly on the browser—no installation needed.  
+- Simple and fun gameplay for quick office breaks
+- Three different game modes: Rock-Paper-Scissors, Number Guessing, and Clicker Game 
+- Works directly on the browser—no installation needed
+- Retro-style visuals to bring back childhood gaming vibes
 - Mobile friendly website
+- Countdown timer to increase challenge
+- Subtle animation for extra fun
 - Level selection: Junior / Senior
 
 ---
@@ -76,3 +79,7 @@
 
 2. Deploy from branch main.
 3. Wait until deployment process done. Enjoy!
+
+---
+## What's For Updates
+
