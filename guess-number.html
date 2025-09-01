@@ -26,19 +26,23 @@
     <header>
     </header>
 
-    <main class="invisible flex flex-col justify-center relative items-center h-[100vh] gap-[1%]">
+    <main class="invisible flex flex-col justify-center relative items-center h-[100vh] lg:gap-[1%]">
         <img id="bossImage" src="./assets/boss-mikir-1.gif" class="w-[50%] lg:w-[15%]">
-        <p id="bossText" class="text-2xl ">I'm thinking about number....</p>
+        
+        <p class="w-[70%] h-[5%] flex justify-center items-center text-center lg:w-[25%] lg:h-[10%] ">
+        <span id="bossText" class="text-2xl leading-none">I'm thinking about number....</span>
+        </p>
+        
         <h1>Guess the number beetween 1 to 100</h1>
 
         <h2 id="numberOfChance"></h2>
         
-        <form id="formGuess" class="flex flex-col gap-[10%] w-[25%] items-center">
+        <form id="formGuess" class="flex flex-col gap-[10%] w-[50%] items-center lg:w-[25%]">
             <input type="text" id="dogNumber" class="border-0 w-[90%] border-b text-center">
-            <button id="buttonGuess" class="w-[50%]">Send to boss</button>
+            <button id="buttonGuess" class="lg:w-[50%]">Send to boss</button>
         </form>
 
-        <img src="./assets/bg-number.png" class="absolute object-fit max-w-[60%] z-[-1]">
+        <img src="./assets/bg-number.png" class="absolute object-fit lg:w-[35%] z-[-1]">
 
     </main>
 </body>

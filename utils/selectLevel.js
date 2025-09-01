@@ -10,7 +10,7 @@ const p = document.createElement("p");
 const buttonJunior = document.createElement("button");
 const buttonSenior = document.createElement("button");
 
-header.style.height = "100vh"
+header.style.height = "100%"
 header.style.display = "flex"
 header.style.flexDirection = "column"
 header.style.alignItems = "center"
