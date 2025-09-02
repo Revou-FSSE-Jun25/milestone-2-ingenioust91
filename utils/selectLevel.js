@@ -2,7 +2,7 @@
 let level;
 
 function initializeLevel(callBackLevel, game){
-const header = document.getElementsByTagName("header")[0]
+const header = document.getElementById("headerLevel")
 const span = document.createElement("span");
 const div = document.createElement("div");
 const div2 = document.createElement("div");

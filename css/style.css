@@ -2,7 +2,7 @@ body {
     font-family: 'Inconsolata', sans-serif;
 }
 
-header {
+#headerLevel {
     height: 100%;
     display: flex;
     align-items: center;
@@ -61,6 +61,11 @@ header {
 
 @media only screen and (max-width: 640px) {
 #imgLevel {
-    width : 90%;
+    width : 70%;
 }
+
+#headerLevel {
+    padding: 7% 0%;
+}
+
 }
