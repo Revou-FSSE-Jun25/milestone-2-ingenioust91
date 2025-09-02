@@ -22,8 +22,11 @@
 
     <script type="module" src="./js/suitGame.js" defer></script>
 </head>
-<body>
-    <main class="h-[100vh] flex flex-col items-center justify-center items-center gap-2">
+<body class="w-[100vw] h-[100vh] overflow-hidden">
+    <header class="flex-row lg:gap-x-[2%] gap-y-0">
+    </header>
+
+    <main class="invisible h-[100vh] flex flex-col items-center justify-center items-center gap-2">
         <div class="relative p-[2%] flex items-center justify-center">
             <img src="./assets/bubble-chat-1.png" class="absolute w-[100%]">
             <h1 class="text-xl text-center">question</h1>
@@ -51,7 +54,7 @@
         </div>
 
         <h2 id="isWin" class="text-3xl text-center"> </h1>
-        <p id="timer">Time Left : 5</p>
+        <p id="timer">Time Left : -</p>
     </main>
 </body>
 </html>

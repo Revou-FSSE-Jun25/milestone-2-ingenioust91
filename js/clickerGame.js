@@ -1,5 +1,5 @@
 import { initializeLevel } from "../utils/selectLevel.js";
-initializeLevel(callBackLevel);
+initializeLevel(callBackLevel, "clickerGame");
 
 import {getScore} from "../utils/score.js"
 

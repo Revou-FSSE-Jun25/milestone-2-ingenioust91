@@ -2,6 +2,16 @@ body {
     font-family: 'Inconsolata', sans-serif;
 }
 
+header {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 3% 0%;
+}
+
+
 @keyframes anjingJump {
     0% {top: 10px;}
     50% { top: -50px;}
@@ -43,4 +53,14 @@ body {
 #buttonNext:hover::after {
     left: 0px;
     top : 0px;
+}
+
+#imgLevel {
+    width: 40%;
+}
+
+@media only screen and (max-width: 640px) {
+#imgLevel {
+    width : 90%;
+}
 }
