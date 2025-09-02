@@ -52,6 +52,10 @@ switch (game) {
             p2.textContent = `${score} chances`;
         }
         break;
+        default :
+        {   h2.textContent = "GAME OVER! You've win"
+            p2.textContent = `${score} arguments`;
+        }
     }
 
 div2.style.display = "flex"

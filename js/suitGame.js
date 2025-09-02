@@ -226,7 +226,8 @@ function findingWinner (userAnswer) {
 
 function stopGame() {
 	if (gameCount == 6) {
-		alert(`sudah menang ${winCount} kali`)
+		clearInterval(intervalId);
+		getScore(winCount, "suitGame")
 	}
 }
 
@@ -235,7 +236,7 @@ function stopGame() {
 
 startGame();
 
-setInterval(function(){
+let intervalId = setInterval(function(){
 	document.getElementById("timer").textContent = `Time Left : ${timer}`
 	timer--;
 	if (timer < 0) {
