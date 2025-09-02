@@ -17,7 +17,7 @@ forBackground.style.height = "100%"
 forBackground.style.top = "0"
 forBackground.style.left = "0"
 
-section.style.height = "100vh"
+section.style.height = "100%"
 section.style.width = "100%"
 section.style.display = "flex"
 section.style.flexDirection = "column"

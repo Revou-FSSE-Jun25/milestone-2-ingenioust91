@@ -121,23 +121,26 @@ const paper = document.getElementById("paper");
 const imgMates = document.getElementById("imgMates");
 const imgDog = document.getElementById("imgDog");
 const isWin = document.getElementById("isWin");
-const buttonNext = document.getElementById("buttonNext");
-
-let idx;
-let compRandom;
-let winCount = 0;
 
 import {getArray} from '../utils/randomArray.js'
 
-buttonNext.addEventListener("click", function() {
-	winCount = winCount;
-	startGame();
-});
+let idx = getArray(listQuestion);;
+let compRandom;
+let winCount = 0;
+let gameCount = 1;
+let timer = 5;
 
 function startGame() {
+	console.log("Start game ke-", gameCount);
+	idx = getArray(listQuestion);
+	winCount = winCount;
+	gameCount++;
+	stopGame(gameCount);
+
+	document.getElementById("timer").textContent = `Time Left : ${timer}`
+	isWin.textContent = "";
 	imgMates.src = "./assets/mates-ask.png";
 	imgDog.src = "./assets/anjing-kerja-1.png";
-	idx = getArray(listQuestion);
 	compRandom = Math.floor(Math.random() * 3);
 
 	document.getElementsByTagName("h1")[0].innerHTML = idx[0].quest;
@@ -167,6 +170,8 @@ paper.addEventListener("click", function() {
 })
 
 function findingWinner (userAnswer) {
+	timer = 2;
+
 	if (compRandom === userAnswer) {
 		isWin.textContent = "DRAW";
 		imgMates.src = "./assets/mates-draw.png";
@@ -174,7 +179,6 @@ function findingWinner (userAnswer) {
 		isWin.textContent = "You Lose!";
 		imgMates.src = "./assets/mates-win.png";
 		imgDog.src = "./assets/anjing-kerja-2.png";
-		winCount--;
 	} else {
 		isWin.textContent = "You Win!";
 		imgMates.src = "./assets/mates-lose.png";
@@ -184,8 +188,27 @@ function findingWinner (userAnswer) {
 	//testing
 	console.log('YOU:', userAnswer)
 	console.log('COMP:',compRandom)
-	console.log(winCount)
+	console.log('MENANG :',winCount)
+}
+
+function stopGame() {
+	if (gameCount == 6) {
+		alert(`sudah menang ${winCount} kali`)
+	}
 }
 
 
-startGame();
+
+window.onload = () => {
+	startGame();
+
+	const timerId = setInterval(function(){
+	document.getElementById("timer").textContent = `Time Left : ${timer}`
+	timer--;
+	if (timer < 0) {
+		timer = 5;
+		startGame();
+	}
+	},1000);
+}
+
