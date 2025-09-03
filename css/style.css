@@ -78,6 +78,12 @@ body {
     top : 0px;
 }
 
+.aNav:hover {
+  text-decoration-line: underline !important;
+  text-decoration-style: wavy !important;
+  text-decoration-color: black !important;
+}
+
 #imgLevel {
     width: 40%;
 }

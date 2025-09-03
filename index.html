@@ -32,10 +32,10 @@
         </div>
 
         <ul class="hidden lg:block lg:flex w-[70%] font-medium text-xl gap-[5%] justify-end">
-            <li><a href="#profileSection" title="profile">Profile</a></li>
-            <li><a href="#meetSection" title="meet">Meet The Office Pup</a></li>
-            <li><a href="#gamesSection" title="games">Games</a></li>
-            <li><a href="#connectSection" title="connect">Connect</a></li>
+            <li><a class="aNav" href="#profileSection" title="profile">Profile</a></li>
+            <li><a class="aNav" href="#meetSection" title="meet">Meet The Office Pup</a></li>
+            <li><a class="aNav" href="#gamesSection" title="games">Games</a></li>
+            <li><a class="aNav" href="#connectSection" title="connect">Connect</a></li>
         </ul>
 
         <div class="w-[10%] cursor-pointer lg:hidden" onclick="hamburgerOpen()">
@@ -56,7 +56,8 @@
 <!-- header section -->
     <header class="h-[100vh] flex flex-col p-[4%] gap-[5%] justify-end lg:justify-center lg:flex-row-reverse lg:items-center lg:p-0">
         <div class="h-[30%] p-[4%] flex flex-col text-center items-center gap-y-[5%] lg:w-[30%] relative">
-            <img src="./assets/dog-foot.gif" class="absolute left-[30%]">
+            <img src="./assets/dog-foot.gif" class="absolute w-[25%] left-0 top-[-30%] lg:left-[-10%] lg:top-0">
+            <img src="./assets/dog-foot.gif" class="absolute w-[20%] rotate-180 right-0 top-[70%]">
 
             <h1 class="text-5xl font-bold">Take a Paws From Work!</h1>
             <h2>Lighthearted online games for stressed office workers, starring our <b>hard-working office dog.</b></h2>
@@ -83,7 +84,7 @@
             </div>
 
             <div class="lg:w-[50%]">
-                <h3 class="text-2xl"><b>Behind the Office Pup</b></h3><br>
+                <h3 class="text-2xl"><b>🐾 Behind the Office Pup</b></h3><br>
                 <hr class="w-[50px] border-[3px]"><br>
                 <p>Revofun is a small indie game developer dedicated to bringing short, fun, and easy-to-play browser games to busy professionals.</p>
                 <br>
@@ -100,7 +101,7 @@
             <img id="anjingWorkImage" src="./assets/anjing-kerja-1.png" class="w-[50%] max-w-[300px] h-fit cursor-pointer" ondblclick="anjingStressed()" >
 
             <div class="lg:w-[50%]">
-                <h3 class="text-2xl"><b>Meet the Office Pup</b></h3><br>
+                <h3 class="text-2xl"><b>Meet the Office Pup 🐾</b></h3><br>
                 <hr class="w-[50px] border-[3px]"><br>
                 <p>Meet the main character, <b>Anjing</b> the office dog. Works as hard as you do — except when he's slacking off for some playtime.</p>
                 <br>
