@@ -2,7 +2,7 @@
   body {
     transform: rotate(90deg);
     transform-origin: left bottom;
-    width: 100vh;
+    width: 90vh;
     height: 100vw;
     overflow-x: hidden;
     position: fixed;
@@ -10,7 +10,7 @@
   }
 
 #headerLevel {
-    height: 90vw;
+    /* height: 90vw; */
     /* padding-right: 7%; */
   }
 
