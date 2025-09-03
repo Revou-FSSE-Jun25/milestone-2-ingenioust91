@@ -59,13 +59,17 @@ body {
     width: 40%;
 }
 
+#spanLevel {
+    width: 65%;
+}
+
 @media only screen and (max-width: 640px) {
 #imgLevel {
     width : 70%;
 }
 
-#headerLevel {
-    padding: 10% 0%;
+#spanLevel {
+    width: 90%;
 }
 
 }

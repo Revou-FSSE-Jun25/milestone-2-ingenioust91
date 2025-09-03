@@ -25,9 +25,9 @@ p.textContent = "Select your job position"
 span.style.fontSize = "1.1rem"
 span.style.textAlign = "left"
 span.style.lineHeight = "1.1"
-span.style.width = "65%"
 span.style.padding = "1%"
 span.style.border = "5px double"
+span.id = "spanLevel"
 
 img.id = "imgLevel"
 
