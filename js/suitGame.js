@@ -132,7 +132,7 @@ import {getArray} from '../utils/randomArray.js'
 let idx = getArray(listQuestion);;
 let compRandom;
 let winCount = 0;
-let gameCount = 1;
+let gameCount = 0;
 let timerLevel;
 let timer;
 
@@ -146,12 +146,10 @@ function callBackLevel(level) {
 }
 
 function startGame() {
-	console.log("Start game ke-", gameCount);
-
 	idx = getArray(listQuestion);
 	winCount = winCount;
 	gameCount++;
-	stopGame(gameCount);
+	console.log("Start game ke-", gameCount);
 
 	//reset everything
 	document.getElementById("timer").textContent = `Time Left : ${timer}`
@@ -172,6 +170,7 @@ function startGame() {
 	rock.innerHTML = idx[0].user[1]
 	paper.innerHTML = idx[0].user[2]
 
+	stopGame(gameCount);
 	return idx;
 }
 
@@ -225,13 +224,11 @@ function findingWinner (userAnswer) {
 }
 
 function stopGame() {
-	if (gameCount == 6) {
+	if (gameCount > 5) {
 		clearInterval(intervalId);
 		getScore(winCount, "suitGame")
 	}
 }
-
-
 
 
 startGame();

@@ -28,9 +28,10 @@
 <!-- navigation -->
     <nav id="hamburger" class="fixed bg-white z-9999 lg:h-[5%] lg:p-[3%_2%] p-[4%] h-[10%] w-full flex items-center justify-between top-0 left-0">
         <div class="lg:w-[4%] w-[10%]">
-            <img src="./assets/favicon-revofun.png">
+            <img src="./assets/favicon-revofun.png" alt="logo-revofun" title="logo-revofun">
         </div>
 
+<!-- navigation for desktop -->
         <ul class="hidden lg:block lg:flex w-[70%] font-medium text-xl gap-[5%] justify-end">
             <li><a class="aNav" href="#profileSection" title="profile">Profile</a></li>
             <li><a class="aNav" href="#meetSection" title="meet">Meet The Office Pup</a></li>
@@ -39,10 +40,11 @@
         </ul>
 
         <div class="w-[10%] cursor-pointer lg:hidden" onclick="hamburgerOpen()">
-            <img src="./assets/hamburger-icon-01.png">
+            <img src="./assets/hamburger-icon-01.png" alt="hamburger" title="hamburger">
         </div>
     </nav>
 
+<!-- navigation for mobile -->
     <div id="navMobile" class="z-9998 hidden fixed w-full bg-white top-[8%] p-[4%]">
         <ul class="flex flex-col font-medium text-xl gap-[5%] justify-end">
             <li><a href="#profileSection" title="profile">Profile</a></li>
@@ -56,8 +58,8 @@
 <!-- header section -->
     <header class="h-[100vh] flex flex-col p-[4%] gap-[5%] justify-end lg:justify-center lg:flex-row-reverse lg:items-center lg:p-0">
         <div class="h-[30%] p-[4%] flex flex-col text-center items-center gap-y-[5%] lg:w-[30%] relative">
-            <img src="./assets/dog-foot.gif" class="absolute w-[25%] left-0 top-[-30%] lg:left-[-10%] lg:top-0">
-            <img src="./assets/dog-foot.gif" class="absolute w-[20%] rotate-180 right-0 top-[70%]">
+            <img src="./assets/dog-foot.gif" class="absolute w-[25%] left-0 top-[-30%] lg:left-[-10%] lg:top-0" alt="dog-foot" title="dog-foot">
+            <img src="./assets/dog-foot.gif" class="absolute w-[20%] rotate-180 right-0 top-[70%]" alt="dog-foot" title="dog-foot">
 
             <h1 class="text-5xl font-bold">Take a Paws From Work!</h1>
             <h2>Lighthearted online games for stressed office workers, starring our <b>hard-working office dog.</b></h2>
@@ -70,7 +72,7 @@
 
         </div>
 
-        <img class="lg:w-[40%]" src="./assets/banner-1.gif">
+        <img class="lg:w-[40%]" src="./assets/banner-1.gif" alt="main-banner" title="main-banner">
     </header >
 <!-- end of header section -->
 
@@ -79,8 +81,8 @@
     <section id="profileSection">
         <div class="flex flex-col w-full p-[2%_8%] gap-[5%] lg:items-center lg:flex-row-reverse lg:justify-center">
             <div class="w-[50%] max-w-[300px] h-fit">
-                <img id="anjingJumpImage" src="./assets/anjing-lompat-2.gif" class="relative top-[10px] cursor-pointer " onclick="anjingJump()">
-                <img src="./assets/anjing-lompat-2a.png">
+                <img id="dogJumpImage" src="./assets/anjing-lompat-2.gif" class="relative top-[10px] cursor-pointer " onclick="dogJump()" alt="image-dog" title="image-dog">
+                <img src="./assets/anjing-lompat-2a.png" alt="image-dog" title="image-dog">
             </div>
 
             <div class="lg:w-[50%]">
@@ -98,7 +100,7 @@
 <!-- meet section -->   
     <section id="meetSection">
         <div class="flex flex-col w-full p-[2%_8%] gap-[5%] items-end lg:items-center lg:flex-row lg:justify-center">
-            <img id="anjingWorkImage" src="./assets/anjing-kerja-1.png" class="w-[50%] max-w-[300px] h-fit cursor-pointer" ondblclick="anjingStressed()" >
+            <img id="dogWorkImage" src="./assets/anjing-kerja-1.png" class="w-[50%] max-w-[300px] h-fit cursor-pointer" ondblclick="dogStressed()" alt="image-dog" title="image-dog" >
 
             <div class="lg:w-[50%]">
                 <h3 class="text-2xl"><b>Meet the Office Pup 🐾</b></h3><br>
@@ -117,21 +119,21 @@
         <section class="flex flex-col lg:flex-row justify-center items-center text-center gap-[10px] pb-[5%]">
             <a class="border-1 rounded-[10px] flex flex-col w-[70%] lg:w-[25%] items-center p-[1%]"
             href="./suit-game.html">
-                <img src="./assets/anjing-meeting.gif" class="w-[82%]">
+                <img src="./assets/anjing-meeting.gif" class="w-[82%]" alt="image-dog" title="image-dog">
                 <h4><b>Anjing Meeting</b></h4>
                 <p>Win this game like you win your arguments in meetings!</p>
             </a>
 
             <a class="border-1 rounded-[10px] flex flex-col w-[70%] lg:w-[25%] items-center p-[1%]"
             href="./guess-number.html">
-                <img src="./assets/boss-mikir-1.gif" class="w-[50%]">
+                <img src="./assets/boss-mikir-1.gif" class="w-[50%]" alt="image-boss" title="image-boss">
                 <h4><b>Anjing Mikir</b></h4>
                 <p>Guess what your boss thinking before he snaps!</p>
             </a>
 
             <a class="border-1 rounded-[10px] flex flex-col w-[70%] lg:w-[25%] items-center p-[1%]"
             href="./clicker-game.html">
-                <img src="./assets/anjing-kabur.gif" class="w-[82%]">
+                <img src="./assets/anjing-kabur.gif" class="w-[82%]" alt="image-dog" title="image-dog">
                 <h4><b>Anjing Kabur</b></h4>
                 <p>Chase your teamates that skip their work again!</p>
             </a>
@@ -141,7 +143,7 @@
 
 <!-- connect section -->   
     <section id="connectSection" class="flex flex-col gap-y-2 w-full bg-black text-white p-[8%] lg:p-[2%_8%]">
-        <img src="./assets/logo-revofun.png" class="max-w-[200px] w-[50%] h-fit">
+        <img src="./assets/logo-revofun.png" class="max-w-[200px] w-[50%] h-fit" alt="logo-revofun" title="logo-revofun">
         
         <div class="text-4xl">
             <a href="https://www.instagram.com/ingesalim/" target="_blank" rel="noopener"  title="instagram byingesalim">

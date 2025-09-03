@@ -47,7 +47,7 @@ let timerId = setInterval(function(){
     }
 },1000)
 
-function randomPosition(timer) {
+const randomPosition = (timer) => {
     randomIntervalId = setInterval(function(){
     imgMates.src = "./assets/mates-1.png";
     const imgWidth = imgMates.clientWidth;

@@ -45,6 +45,7 @@
 - Mobile friendly website
 - Countdown timer to increase challenge
 - Subtle animation for extra fun
+- Hidden clue
 - Level selection: Junior / Senior
 
 ---
