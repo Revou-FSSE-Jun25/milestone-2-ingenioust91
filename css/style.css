@@ -18,6 +18,29 @@ body {
     100% {top: 10px;}
 }
 
+#buttonJunior {
+    animation : ping 0.5s infinite;
+}
+
+#buttonSenior {
+    animation : ping2 0.5s infinite;
+}
+
+@keyframes ping {
+  100% {
+    left: 4px;
+    top : 4px
+  }
+}
+
+@keyframes ping2 {
+  50% {
+    left: 4px;
+    top : 4px
+  }
+}
+
+
 #buttonPlayNow, #buttonGuess, #buttonJunior, #buttonSenior,
 #buttonPlayAgain, #buttonBack, #buttonNext {
     background-color: black;

@@ -25,7 +25,7 @@ section.style.alignItems = "center"
 section.style.justifyContent = "center"
 section.style.position = "absolute"
 
-div.style.padding = "5%"
+div.style.padding = "3%"
 div.style.borderWidth = "1px"
 div.style.backgroundColor = "white"
 div.style.display = "flex"
