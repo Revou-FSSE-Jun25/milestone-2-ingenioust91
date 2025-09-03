@@ -6,12 +6,12 @@
     height: 100vw;
     overflow-x: hidden;
     position: fixed;
-    top : -45vh;
+    top : -50vh;
   }
 
 #headerLevel {
     height: 90vw;
-    padding-right: 7%;
+    /* padding-right: 7%; */
   }
 
 #imgLevel {
