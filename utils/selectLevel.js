@@ -43,7 +43,7 @@ switch (game) {
     }break;
     default :
     {   img.src = "./assets/anjing-mikir.gif"
-        span.innerHTML = "<h1>ANJING MIKIR 💬</h1><p>You’re facing a boss who never gives clear instructions.</p><br><p>The boss secretly has a number in mind, and every time you make a mistake you will be scolded by the boss.</p><br><p><b>Your task is to guess the number by reading between the lines.</b> It’s a battle of patience and intuition : can you read your boss’s mind before time runs out?</p>"
+        span.innerHTML = "<h1>ANJING MIKIR 💬</h1><p>You’re facing a boss who never gives clear instructions. Your task is to guess the number by reading between the lines. Every time you make a mistake your chance will decrease and you will be scolded by the boss.</p><br><p>A phone on boss table will rings—it’s a hidden clue from your teammates.</p><p>But be careful: <b>you can only answer it once. If you pick up the phone, you’ll get the clue, but lose one guessing attempt.</b></p><br><p>It’s a battle of patience and intuition : can you read your boss’s mind before your chance runs out?</p>"
     }
 }
 

@@ -15,6 +15,8 @@ const bossImage = document.getElementById("bossImage");
 let dogNumber = document.getElementById("dogNumber");
 const formInput = document.getElementById("formInput");
 const numberOfChance = document.getElementById("numberOfChance");
+const clue = document.getElementById("clue");
+const textClue = document.getElementById("textClue");
 dogNumber.value = "";
 
 function callBackLevel(level) {
@@ -77,7 +79,33 @@ buttonGuess.addEventListener("click", function() {
 })
 
 function getChance(chance){
-numberOfChance.textContent = `You have ${chance} chances left`}
+    numberOfChance.textContent = `You have ${chance} chances left`
+}
+
+clue.addEventListener("click", function(){
+    chance--;
+    getChance(chance);
+    switch (true) {
+        case (bossNumber >= 1 && bossNumber <= 20) :
+        {textClue.textContent = "It’s somewhere between 1 and 20."}
+        break;     
+        case (bossNumber >= 21 && bossNumber <= 40) :
+        {textClue.textContent = "It’s somewhere between 21 and 40."}
+        break;
+        case (bossNumber >= 41 && bossNumber <= 60) :
+        {textClue.textContent = "It’s somewhere between 41 and 60."}
+        break;  
+        case (bossNumber >= 61 && bossNumber <= 80) :
+        {textClue.textContent = "It’s somewhere between 61 and 80."}
+        break; 
+        case (bossNumber >= 81 && bossNumber <= 100) :
+        {textClue.textContent = "It’s somewhere between 81 and 100."}
+        break; 
+        default : {textClue.textContent = "Just guess.... a number"}
+    }
+    clue.src = "./assets/telephone.png"
+    clue.style.pointerEvents = "none"; 
+})
 
 const tooLow = [
     "Too low! Come on, that's not complicated",

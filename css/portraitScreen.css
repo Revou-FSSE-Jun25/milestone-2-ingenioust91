@@ -9,7 +9,12 @@
     top : -45vh;
   }
 
-  header {
-    height: 100vw;
+#headerLevel {
+    height: 90vw;
+    padding: 0%;
   }
+
+#imgLevel {
+    width : 30%;
+}
 }

@@ -26,24 +26,28 @@
     <header id="headerLevel" class="flex-row lg:gap-x-[2%] gap-y-0">
     </header>
 
-    <main class="invisible flex flex-col justify-center relative items-center h-[100vh] lg:gap-[1%]">
+    <main class="invisible flex flex-col justify-center relative items-center h-[100vh]">
         <img id="bossImage" src="./assets/boss-mikir-1.gif" class="w-[50%] lg:w-[15%]">
         
-        <p class="w-[70%] h-[5%] flex justify-center items-center text-center lg:w-[25%] lg:h-[10%] ">
-        <span id="bossText" class="text-2xl leading-none">I'm thinking about number....</span>
-        </p>
+        <section class="z-2 bg-white border-double border-4 flex flex-col justify-center items-center w-[90%] lg:w-[30%] p-[1%_2%]">
+            <p class="flex justify-center items-center text-center">
+                <span id="bossText" class="text-2xl leading-none">I'm thinking about number....</span>
+            </p>
         
-        <h1>Guess the number beetween 1 to 100</h1>
+            <h1>Guess the number beetween 1 to 100</h1>
 
-        <h2 id="numberOfChance"></h2>
+            <h2 id="numberOfChance"></h2>
         
-        <form id="formGuess" class="flex flex-col gap-[10%] w-[50%] items-center lg:w-[25%]">
-            <input type="text" id="dogNumber" class="border-0 w-[90%] border-b text-center">
-            <button id="buttonGuess" class="lg:w-[50%]">Send to boss</button>
-        </form>
+            <form id="formGuess" class="flex flex-col gap-[10%] items-center w-full">
+                <input type="text" id="dogNumber" class="border-0 w-[90%] border-b text-center">
+                <button id="buttonGuess" class="lg:w-[50%]">Send to boss</button>
+            </form>
+        </section>
 
-        <img src="./assets/bg-number.png" class="absolute object-fit lg:w-[35%] z-[-1]">
-
+        <img id="clue" src="./assets/telephone.gif" class="absolute object-fit left-[55%] z-1 cursor-pointer">
+        <img src="./assets/bg-number.png" class="absolute object-fit w-[90%] lg:w-[35%] z-[-1]">
+        
     </main>
+    <p id="textClue" class="absolute bottom-0 left-[50%] translate-x-[-50%] text-center"></p>
 </body>
 </html>
