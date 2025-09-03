@@ -68,6 +68,10 @@ body {
     width : 70%;
 }
 
+#headerLevel {
+    padding-bottom: 7%;
+}
+
 #spanLevel {
     width: 90%;
 }
