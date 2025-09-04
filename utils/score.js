@@ -48,8 +48,8 @@ switch (game) {
         }
         break;
         case "guessNumber" :
-        {   h2.textContent = "GAME OVER! You have already wasted"
-            p2.textContent = `${score} chances`;
+        {   h2.textContent = "GAME OVER!"
+            p2.textContent = `${score}`;
         }
         break;
         default :

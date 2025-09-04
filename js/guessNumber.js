@@ -7,7 +7,6 @@ import {getArray} from '../utils/randomArray.js'
 
 let bossNumber = Math.floor(Math.random() * 100) + 1;
 let chance;
-let miss = 0;
 
 const buttonGuess = document.getElementById("buttonGuess");
 const bossText = document.getElementById("bossText");
@@ -52,7 +51,13 @@ buttonGuess.addEventListener("click", function() {
     let ChangeimageBoss;
 
     if (bossNumber == dogNumber.value || chance == 1) {
-        getScore(miss, "guessNumber")
+        if(bossNumber == dogNumber.value){
+            line = getArray(right);
+            getScore(line, "guessNumber")
+        } else {
+            line = getArray(allFalse);
+            getScore(line, "guessNumber")
+        }
     }
 
     if (dogNumber.value == "") {
@@ -63,14 +68,12 @@ buttonGuess.addEventListener("click", function() {
         line = getArray(tooLow);
         ChangeimageBoss = getArray(imgStillFalse);
         chance--;
-        miss++;
         getChance(chance);
     }
     else {
         line = getArray(tooHigh);
         ChangeimageBoss = getArray(imgStillFalse);
         chance--;
-        miss++;
         getChance(chance);
     }
         
@@ -119,11 +122,17 @@ const tooHigh = [
     "Nope, that’s too much. Revise it."
 ]
 
-// const right = [
-//     "Finally. I know my instructions are clear.",
-//     "Good. But I expect faster.",
-//     "OK."
-// ]
+const right = [
+    "Finally. I know my instructions are clear.",
+    "Good. But I expect faster.",
+    "OK. Do Better next time."
+]
+
+const allFalse = [
+    "You can’t handle something this simple?",
+    "Do I have to do everything myself?",
+    "Can you even do this job or not?"
+]
 
 const imgStillFalse = [
     "./assets/boss-mikir-false-1.png",
