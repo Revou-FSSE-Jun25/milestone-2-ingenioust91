@@ -20,8 +20,10 @@
 ---
 **2. Anjing Mikir**
 - **Theme:** Dealing with the boss whose desire can't be figured out.  
-- **Storyline:** Your boss never gives a straight answer, and you must keep guessing until you figure out what they want.  
-- **Gameplay:** Based on a *Number Guessing Game*.  
+- **Storyline:** Your boss never gives a straight answer, and you must keep guessing until you figure out what they want.
+- **Level Selection:** Junior get 10 chances, Senior get 5 Chances
+- **Additional:** There's a hint for help
+- **Gameplay:** A *Number Guessing Game*.  
   1. The computer secretly picks a number between **1–100**.  
   2. You guess the number.  
   3. Each attempt is followed by a hint: **higher**, **lower**, or **correct**.  
@@ -31,6 +33,7 @@
 **3. Anjing Kabur**
 - **Theme:** Chasing teammates who dodge responsibilities.  
 - **Storyline:** Everyone has that one teammate who always slips away from tasks, your mission is to catch them!  
+- **Level Selection:** Junior get 100 seconds and slower movement, Senior get 60 seconds and faster movement
 - **Gameplay:** A *Clicker Game*.  
   1. A teammate randomly appears in different spots.  
   2. Click on them before they disappear.  
@@ -73,7 +76,7 @@
 ---
 ## Tech Stack
 - **HTML5**  
-- **CSS3**  
+- **Tailwind CSS**  
 - **JavaScript (ES6)**
 
 ---
@@ -87,4 +90,9 @@
 
 ---
 ## What's For Updates
-
+- Add more games
+- Add a leaderboard or scoring system
+- Migrate project from JavaScript to TypeScript
+- Add Node Modules (animejs, lodash)
+- Add more animations
+- Improve UI with more colors
