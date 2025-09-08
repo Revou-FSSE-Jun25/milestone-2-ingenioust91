@@ -64,6 +64,7 @@ buttonPlayAgain.addEventListener("click", function() {
         case "guessNumber" :
         {window.location.href = "guess-number.html"}
         break;
+        default : {window.location.href = "suit-game.html"}
     }
     
 })

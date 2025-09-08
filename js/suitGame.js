@@ -5,14 +5,17 @@ const imgMates = document.getElementById("imgMates");
 const imgDog = document.getElementById("imgDog");
 const isWin = document.getElementById("isWin");
 
-import { initializeLevel } from "../utils/selectLevel.js";
+import { initializeLevel } from "./utils/selectLevel.js";
 initializeLevel(callBackLevel, "suitGame");
 
 import {listQuestion} from "./array.js";
+import {getScore} from "./utils/score.js"
+import {getArray} from './utils/randomArray.js'
 
-import {getScore} from "../utils/score.js"
-
-import {getArray} from '../utils/randomArray.js'
+// Add null checks
+const main = document.getElementsByTagName("main")[0];
+const mainWidth = main.clientWidth;
+const mainHeight = main.clientHeight;
 
 let idx = getArray(listQuestion);;
 let compRandom;

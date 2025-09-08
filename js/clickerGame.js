@@ -1,9 +1,9 @@
-import { initializeLevel } from "../utils/selectLevel.js";
+import { initializeLevel } from "./utils/selectLevel.js";
 initializeLevel(callBackLevel, "clickerGame");
 
-import {getScore} from "../utils/score.js"
+import {getScore} from "./utils/score.js"
 
-let timeLeft;
+let timeLeft = 0;
 
 function callBackLevel(level) {
     if (level === "junior") {
@@ -14,12 +14,10 @@ function callBackLevel(level) {
         randomPosition(750);
     }
 }
-
+// Add null checks
 const main = document.getElementsByTagName("main")[0];
-if (main) {
-    const mainWidth = main.clientWidth;
-    const mainHeight = main.clientHeight;
-}
+const mainWidth = main.clientWidth;
+const mainHeight = main.clientHeight;
 
 let imgMates = document.createElement("img");
 imgMates.style.position = "absolute";

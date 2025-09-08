@@ -1,11 +1,14 @@
-import { initializeLevel } from "../utils/selectLevel.js";
+import { initializeLevel } from "./utils/selectLevel.js";
 initializeLevel(callBackLevel);
 
 import {tooLow, tooHigh, right, allFalse, imgStillFalse} from "./array.js";
+import {getScore} from "./utils/score.js"
+import {getArray} from './utils/randomArray.js'
 
-import {getScore} from "../utils/score.js"
-
-import {getArray} from '../utils/randomArray.js'
+// Add null checks
+const main = document.getElementsByTagName("main")[0];
+const mainWidth = main.clientWidth;
+const mainHeight = main.clientHeight;
 
 let bossNumber = Math.floor(Math.random() * 100) + 1;
 let chance;
