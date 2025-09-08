@@ -2,34 +2,24 @@
 let level;
 
 function initializeLevel(callBackLevel, game){
-const header = document.getElementById("headerLevel")
+const header = document.getElementById("levelHeader")
 const span = document.createElement("span");
 const div = document.createElement("div");
 const div2 = document.createElement("div");
-const p = document.createElement("p");
+const h2 = document.createElement("h2");
 const img = document.createElement("img");
 const buttonJunior = document.createElement("button");
 const buttonSenior = document.createElement("button");
 
-div.style.padding = "2%"
-div.style.borderWidth = "1px"
-div.style.display = "flex"
-div.style.flexDirection = "column"
-div.style.alignItems = "center"
-div.style.justifyContent = "center"
+div.classList.add("levelDiv");
+div.classList.add("flexColumn");
 
-p.style.textAlign = "center"
-p.style.fontSize = "1.25rem"
-p.textContent = "Select your job position"
+div.classList.add("levelH2");
+h2.textContent = "Select your job position"
 
-span.style.fontSize = "1.1rem"
-span.style.textAlign = "left"
-span.style.lineHeight = "1.1"
-span.style.padding = "1%"
-span.style.border = "5px double"
-span.id = "spanLevel"
+span.classList.add("levelSpan")
 
-img.id = "imgLevel"
+img.classList.add("levelImg")
 
 switch (game) {
     case "suitGame" : 
@@ -47,21 +37,20 @@ switch (game) {
     }
 }
 
-div2.style.display = "flex"
-div2.style.alignItems = "center"
-div2.style.justifyContent = "center"
-div2.style.gap = "5%"
+div2.classList.add("levelDiv2")
 
 buttonJunior.textContent = "Junior"
-buttonJunior.id = "buttonJunior"
+buttonJunior.classList.add("buttonStyle")
+buttonSenior.classList.add("buttonAnimation")
 
 buttonSenior.textContent = "Senior"
-buttonSenior.id = "buttonSenior"
+buttonSenior.classList.add("buttonStyle")
+buttonSenior.classList.add("buttonAnimation")
 
 header.appendChild(img)
 header.appendChild(div)
 header.appendChild(span)
-div.appendChild(p)
+div.appendChild(h2)
 div.appendChild(div2)
 div2.appendChild(buttonJunior)
 div2.appendChild(buttonSenior)

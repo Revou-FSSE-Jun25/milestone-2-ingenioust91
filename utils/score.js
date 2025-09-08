@@ -9,37 +9,13 @@ const p2 = document.createElement("p");
 const buttonPlayAgain = document.createElement("button");
 const buttonBack = document.createElement("button");
 
-forBackground.style.backgroundColor = "rgba(0,0,0,0.25)";
-forBackground.style.position = "fixed"
-forBackground.style.zIndex = "999"
-forBackground.style.width = "100%"
-forBackground.style.height = "100%"
-forBackground.style.top = "0"
-forBackground.style.left = "0"
-
-section.style.height = "100%"
-section.style.width = "100%"
-section.style.display = "flex"
-section.style.flexDirection = "column"
-section.style.alignItems = "center"
-section.style.justifyContent = "center"
-section.style.position = "absolute"
-
-div.style.padding = "3%"
-div.style.borderWidth = "1px"
-div.style.backgroundColor = "white"
-div.style.display = "flex"
-div.style.flexDirection = "column"
-div.style.alignItems = "center"
-div.style.justifyContent = "center"
-div.style.gap = "2%"
-
-h2.style.textAlign = "center"
-h2.style.fontFamily = "'Inconsolata', sans-serif"
-h2.style.fontSize = "1.25rem"
-
-p2.style.fontSize = "2rem"
-p2.style.textAlign = "center"
+forBackground.classList.add("scoreBackground");
+section.classList.add("scoreSection");
+section.classList.add("flexColumn");
+div.classList.add("scoreDiv");
+div.classList.add("flexColumn");
+h2.classList.add("scoreH2");
+p2.classList.add("scoreP2");
 
 switch (game) {
         case "clickerGame" :
@@ -58,15 +34,11 @@ switch (game) {
         }
     }
 
-div2.style.display = "flex"
-div2.style.alignItems = "center"
-div2.style.justifyContent = "center"
-div2.style.gap = "5%"
-div2.style.width = "100%"
+div2.classList.add("scoreDiv2");
 
 buttonPlayAgain.textContent = "Play Again"
-buttonPlayAgain.id = "buttonPlayAgain"
-buttonBack.id = "buttonBack"
+buttonPlayAgain.classList.add("buttonStyle")
+buttonBack.classList.add("buttonStyle")
 buttonBack.textContent = "Back to Homepage"
 
 document.body.appendChild(section);

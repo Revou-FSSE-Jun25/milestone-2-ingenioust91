@@ -15,9 +15,11 @@ function callBackLevel(level) {
     }
 }
 
-let main = document.getElementsByTagName("main")[0];
-const mainWidth = main.clientWidth;
-const mainHeight = main.clientHeight;
+const main = document.getElementsByTagName("main")[0];
+if (main) {
+    const mainWidth = main.clientWidth;
+    const mainHeight = main.clientHeight;
+}
 
 let imgMates = document.createElement("img");
 imgMates.style.position = "absolute";
