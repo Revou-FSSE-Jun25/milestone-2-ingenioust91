@@ -42,7 +42,6 @@ dogNumber.addEventListener("input", function() {
     let input = dogNumber.value;
     let numberInput = parseInt(input.trim())
 
-
     if (isNaN(numberInput)) {
         document.getElementById("dogNumber").value = "";
     }
@@ -56,33 +55,34 @@ buttonGuess.addEventListener("click", function() {
     let line;
     let ChangeimageBoss;
 
-    
-    if(bossNumber == dogNumber.value){
-        line = getArray(right);
-        getScore(line, "guessNumber")
-    } 
+    switch (true) {
+        case bossNumber == dogNumber.value :
+        {   line = getArray(right);
+            getScore(line, "guessNumber")}
+        break;
+
+        case chance == 1 :
+        {   line = getArray(allFalse);
+            getScore(line, "guessNumber")}
+        break;
+
+        case dogNumber.value === "" :
+        {   line = "Give me something";
+            ChangeimageBoss = getArray(imgStillFalse);}
+        break;
         
-    if (chance == 1) {
-        line = getArray(allFalse);
-        getScore(line, "guessNumber")
-    }
+        case bossNumber > dogNumber.value :
+        {   line = getArray(tooLow);
+            ChangeimageBoss = getArray(imgStillFalse);
+            chance--;
+            getChance(chance);}
+        break;
 
-
-    if (dogNumber.value === "") {
-        line = "Give me something";
-        ChangeimageBoss = getArray(imgStillFalse);
-    }
-    else if (bossNumber > dogNumber.value) {
-        line = getArray(tooLow);
-        ChangeimageBoss = getArray(imgStillFalse);
-        chance--;
-        getChance(chance);
-    }
-    else {
-        line = getArray(tooHigh);
-        ChangeimageBoss = getArray(imgStillFalse);
-        chance--;
-        getChance(chance);
+        default :
+        {   line = getArray(tooHigh);
+            ChangeimageBoss = getArray(imgStillFalse);
+            chance--;
+            getChance(chance);}
     }
         
     bossText.textContent = line;
@@ -105,3 +105,26 @@ clue.addEventListener("click", function(){
     clue.style.pointerEvents = "none"; 
 })
 
+// clue.addEventListener("click", function(){
+//     chance--;
+//     getChance(chance);
+//     clueGenerator(bossNumber);
+// })
+
+// function* clueGenerator(bossNumber) {
+//     yield clue1(bossNumber);
+//     yield clue2(bossNumber);
+//     return clue3(bossNumber);
+// }
+
+// const clue1 = (bossNumber) => {
+//     const start = Math.floor(bossNumber / 20) * 20 + 1;
+//     const end = start + 20;
+//     textClue.textContent = `It’s somewhere between ${start} and ${end}.`
+// }
+
+// const clue3 = (bossNumber) => {
+
+//     clue.src = "./assets/telephone.png";
+//     clue.style.pointerEvents = "none"; 
+// }
