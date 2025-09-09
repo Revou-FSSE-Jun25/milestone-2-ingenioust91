@@ -12,16 +12,11 @@ import {listQuestion} from "./array.js";
 import {getScore} from "./utils/score.js"
 import {getArray} from './utils/randomArray.js'
 
-// Add null checks
-const main = document.getElementsByTagName("main")[0];
-const mainWidth = main.clientWidth;
-const mainHeight = main.clientHeight;
-
 let idx = getArray(listQuestion);;
 let compRandom;
 let winCount = 0;
 let gameCount = 0;
-let timerLevel;
+let timerLevel = 0;
 let timer = 0;
 
 function callBackLevel(level) {
@@ -35,7 +30,6 @@ function callBackLevel(level) {
 
 function startGame() {
 	idx = getArray(listQuestion);
-	winCount = winCount;
 	gameCount++;
 	console.log("Start game ke-", gameCount);
 
@@ -58,7 +52,9 @@ function startGame() {
 	rock.innerHTML = idx[0].user[1]
 	paper.innerHTML = idx[0].user[2]
 
-	stopGame(gameCount);
+	if (gameCount > 5) {
+	stopGame(); }
+
 	return idx;
 }
 
@@ -84,26 +80,36 @@ paper.addEventListener("click", function() {
 })
 
 function findingWinner (userAnswer) {
-	timer = 4;
-
+	// disable all button
 	paper.style.pointerEvents = "none"; 
 	rock.style.pointerEvents = "none"; 
 	scissor.style.pointerEvents = "none"; 
 
-	if (compRandom === userAnswer) {
-		isWin.textContent = "DRAW";
-		imgMates.src = "./assets/mates-draw.png";
-		imgDog.src = "./assets/anjing-draw.png";
-	} else if ((compRandom-userAnswer + 3) % 3 === 1){
-		isWin.textContent = "You Lose!";
-		imgMates.src = "./assets/mates-win.png";
-		imgDog.src = "./assets/anjing-kerja-2.png";
-	} else {
-		isWin.textContent = "You Win!";
-		imgMates.src = "./assets/mates-lose.png";
-		imgDog.src = "./assets/anjing-win.png";
-		winCount++;
+	let result = (compRandom-userAnswer + 3) % 3;
+	switch (result) {
+		case 0 :
+		{	isWin.textContent = "DRAW";
+			imgMates.src = "./assets/mates-draw.png";
+			imgDog.src = "./assets/anjing-draw.png";}
+		break;
+		case 1 :
+		{	isWin.textContent = "You Lose!";
+			imgMates.src = "./assets/mates-win.png";
+			imgDog.src = "./assets/anjing-kerja-2.png";}
+		break;
+		default :
+		{	isWin.textContent = "You Win!";
+			imgMates.src = "./assets/mates-lose.png";
+			imgDog.src = "./assets/anjing-win.png";
+			winCount++;}
 	}
+
+	clearInterval(intervalId);
+
+	setTimeout (function(){
+		timer = timerLevel;
+		startGame();
+	},4000)
 
 	//testing
 	console.log('YOU:', userAnswer)
@@ -112,14 +118,9 @@ function findingWinner (userAnswer) {
 }
 
 function stopGame() {
-	if (gameCount > 5) {
-		clearInterval(intervalId);
-		getScore(winCount, "suitGame")
-	}
+	clearInterval(intervalId);
+	getScore(winCount, "suitGame");
 }
-
-
-startGame();
 
 let intervalId = setInterval(function(){
 	document.getElementById("timer").textContent = `Time Left : ${timer}`
