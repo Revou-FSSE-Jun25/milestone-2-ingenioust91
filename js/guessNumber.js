@@ -93,38 +93,54 @@ function getChance(chance){
     numberOfChance.textContent = `You have ${chance} chances left`
 }
 
-clue.addEventListener("click", function(){
-    chance--;
-    getChance(chance);
-
-    const start = Math.floor(bossNumber / 20) * 20 + 1;
-    const end = start + 20;
-    
-    textClue.textContent = `It’s somewhere between ${start} and ${end}.`;
-    clue.src = "./assets/telephone.png"
-    clue.style.pointerEvents = "none"; 
-})
-
 // clue.addEventListener("click", function(){
 //     chance--;
 //     getChance(chance);
-//     clueGenerator(bossNumber);
-// })
 
-// function* clueGenerator(bossNumber) {
-//     yield clue1(bossNumber);
-//     yield clue2(bossNumber);
-//     return clue3(bossNumber);
-// }
-
-// const clue1 = (bossNumber) => {
+//     //ex : bossNumber 31 -> (31/20)=1.55  1*20+1 = 21
 //     const start = Math.floor(bossNumber / 20) * 20 + 1;
 //     const end = start + 20;
-//     textClue.textContent = `It’s somewhere between ${start} and ${end}.`
-// }
-
-// const clue3 = (bossNumber) => {
-
-//     clue.src = "./assets/telephone.png";
+    
+//     textClue.textContent = `It’s somewhere between ${start} and ${end}.`;
+//     clue.src = "./assets/telephone.png"
 //     clue.style.pointerEvents = "none"; 
-// }
+// })
+
+const clueGen = clueGenerator(bossNumber);
+
+clue.addEventListener("click", function(){
+    chance--;
+    getChance(chance);
+    clueGen.next();
+})
+
+function* clueGenerator(bossNumber) {
+    yield clue1(bossNumber);
+    yield clue2(bossNumber);
+    return clue3(bossNumber);
+}
+
+const clue1 = (bossNumber) => {
+    const start = Math.floor(bossNumber / 20) * 20 + 1; //ex : bossNumber 31 -> (31/20)=1.55  1*20+1 = 21
+    const end = start + 20;
+    textClue.textContent = `It’s somewhere between ${start} and ${end}.`
+}
+
+const clue2 = (bossNumber) => {
+    const oddNumber = bossNumber % 2; //ex: 77 % 2 = 38 + 1 ->odd
+
+    if(oddNumber === 1) {
+        textClue.textContent = "The boss loves odd numbers."
+    } else {textClue.textContent = "The boss loves even numbers."}
+    
+}
+
+const clue3 = (bossNumber) => {
+    const clueNumber = bossNumber * 2;
+
+    if(clueNumber>= 100) {
+        textClue.textContent = "When doubled, it’s more than 100"
+    } else {textClue.textConten = "When doubled, it’sless than 100"}
+    clue.src = "./assets/telephone.png";
+    clue.style.pointerEvents = "none"; 
+}

@@ -22,7 +22,7 @@ let compRandom;
 let winCount = 0;
 let gameCount = 0;
 let timerLevel;
-let timer;
+let timer = 0;
 
 function callBackLevel(level) {
     if (level === "junior") {
