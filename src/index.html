@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Revofun - The Game Developer</title>
+    <meta name="title" content="Revofun - The Game Developer" />
+    <meta name="description" content="Revofun is a small indie game developer dedicated to bringing short, fun, and easy-to-play browser games to busy professionals." />
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Game Developer">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Inge Salim">
+
+    <link rel="icon" type="favicon" href="./assets/favicon-revofun.png">
+    <!-- tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+    <!-- sosmed icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- <script src="./js/script.js" defer></script> -->
+</head>
+
+<body>
+<!-- navigation -->
+    <nav id="hamburger" class="fixed bg-white z-9999 lg:h-[5%] lg:p-[3%_2%] p-[4%] h-[10%] w-full flex items-center justify-between top-0 left-0">
+        <div class="lg:w-[4%] w-[10%]">
+            <img src="./assets/favicon-revofun.png" alt="logo-revofun" title="logo-revofun">
+        </div>
+
+<!-- navigation for desktop -->
+        <ul class="hidden lg:block lg:flex w-[70%] font-medium text-xl gap-[5%] justify-end">
+            <li><a class="aNav" href="#profileSection" title="profile">Profile</a></li>
+            <li><a class="aNav" href="#meetSection" title="meet">Meet The Office Pup</a></li>
+            <li><a class="aNav" href="#gamesSection" title="games">Games</a></li>
+            <li><a class="aNav" href="#connectSection" title="connect">Connect</a></li>
+        </ul>
+
+        <div id="hamburgerIcon" class="w-[10%] cursor-pointer lg:hidden">
+            <img src="./assets/hamburger-icon-01.png" alt="hamburger" title="hamburger">
+        </div>
+    </nav>
+
+<!-- navigation for mobile -->
+    <div id="navMobile" class="z-9998 hidden fixed w-full bg-white top-[8%] p-[4%]">
+        <ul class="flex flex-col font-medium text-xl gap-[5%] justify-end">
+            <li><a href="#profileSection" title="profile">Profile</a></li>
+            <li><a href="#meetSection" title="meet">Meet The Office Pup</a></li>
+            <li><a href="#gamesSection" title="games">Games</a></li>
+            <li><a href="#connectSection" title="connect">Connect</a></li>
+        </ul>
+    </div>
+<!-- end of navigation -->
+
+<!-- header section -->
+    <header class="h-[100vh] flex flex-col p-[4%] gap-[5%] justify-end lg:justify-center lg:flex-row-reverse lg:items-center lg:p-0">
+        <div class="h-[30%] p-[4%] flex flex-col text-center items-center gap-y-[5%] lg:w-[30%] relative">
+            <img src="./assets/dog-foot.gif" class="absolute w-[25%] left-0 top-[-30%] lg:left-[-10%] lg:top-0" alt="dog-foot" title="dog-foot">
+            <img src="./assets/dog-foot.gif" class="absolute w-[20%] rotate-180 right-0 top-[70%]" alt="dog-foot" title="dog-foot">
+
+            <h1 class="text-5xl font-bold">Take a Paws From Work!</h1>
+            <h2>Lighthearted online games for stressed office workers, starring our <b>hard-working office dog.</b></h2>
+            
+            <a class="text-xl text-white" href="#gamesSection">
+                <div class="buttonStyle" id="buttonPlayNow" >
+                Play Now
+                </div>
+            </a>
+
+        </div>
+
+        <img class="lg:w-[40%]" src="./assets/banner-1.gif" alt="main-banner" title="main-banner">
+    </header >
+<!-- end of header section -->
+
+    <main>
+<!-- profile section -->   
+    <section id="profileSection">
+        <div class="flex flex-col w-full p-[2%_8%] gap-[5%] lg:items-center lg:flex-row-reverse lg:justify-center">
+            <div class="w-[50%] max-w-[300px] h-fit">
+                <img id="dogJumpImage" src="./assets/anjing-lompat-2.gif" class="relative top-[10px] cursor-pointer " alt="image-dog" title="image-dog">
+                <img src="./assets/anjing-lompat-2a.png" alt="image-dog" title="image-dog">
+            </div>
+
+            <div class="lg:w-[50%]">
+                <h3 class="text-2xl"><b>🐾 Behind the Office Pup</b></h3><br>
+                <hr class="w-[50px] border-[3px]"><br>
+                <p>Revofun is a small indie game developer dedicated to bringing short, fun, and easy-to-play browser games to busy professionals.</p>
+                <br>
+                <p>We believe that a quick laugh and a few minutes of distraction can reset your mind and help you tackle the rest of your day with more focus.<b> Our mission is to create simple, stress-free online games that you can enjoy in between meetings, during coffee breaks, or whenever you need a moment to breathe.</b></p>
+            </div>
+        </div>
+
+    </section>
+<!-- end of profile section -->
+
+<!-- meet section -->   
+    <section id="meetSection">
+        <div class="flex flex-col w-full p-[2%_8%] gap-[5%] items-end lg:items-center lg:flex-row lg:justify-center">
+            <img id="dogWorkImage" src="./assets/anjing-kerja-1.png" class="w-[50%] max-w-[300px] h-fit cursor-pointer" alt="image-dog" title="image-dog" >
+
+            <div class="lg:w-[50%]">
+                <h3 class="text-2xl"><b>Meet the Office Pup 🐾</b></h3><br>
+                <hr class="w-[50px] border-[3px]"><br>
+                <p>Meet the main character, <b>Anjing</b> the office dog. Works as hard as you do — except when he's slacking off for some playtime.</p>
+                <br>
+            </div>
+        </div>
+    </section>
+<!-- end of meet section -->
+
+<!-- games section -->   
+    <section id="gamesSection">
+        <h3 class="text-2xl text-center"><b>Game List</b></h3><br>
+
+        <section class="flex flex-col lg:flex-row justify-center items-center text-center gap-[10px] pb-[5%]">
+            <a class="border-1 rounded-[10px] flex flex-col w-[70%] lg:w-[25%] items-center p-[1%]"
+            href="./suit-game.html">
+                <img src="./assets/anjing-meeting.gif" class="w-[82%]" alt="image-dog" title="image-dog">
+                <h4><b>Anjing Meeting</b></h4>
+                <p>Win this game like you win your arguments in meetings!</p>
+            </a>
+
+            <a class="border-1 rounded-[10px] flex flex-col w-[70%] lg:w-[25%] items-center p-[1%]"
+            href="./guess-number.html">
+                <img src="./assets/boss-mikir-1.gif" class="w-[50%]" alt="image-boss" title="image-boss">
+                <h4><b>Anjing Mikir</b></h4>
+                <p>Guess what your boss thinking before he snaps!</p>
+            </a>
+
+            <a class="border-1 rounded-[10px] flex flex-col w-[70%] lg:w-[25%] items-center p-[1%]"
+            href="./clicker-game.html">
+                <img src="./assets/anjing-kabur.gif" class="w-[82%]" alt="image-dog" title="image-dog">
+                <h4><b>Anjing Kabur</b></h4>
+                <p>Chase your teamates that skip their work again!</p>
+            </a>
+
+            <a class="border-1 rounded-[10px] flex flex-col w-[70%] lg:w-[25%] items-center p-[1%]"
+            href="./catch-object.html">
+                <img src="" class="w-[82%]" alt="image-dog" title="image-dog">
+                <h4><b>Anjing Tangkap</b></h4>
+                <p>Lorem ipsum dolor sit amet</p>
+            </a>
+        </section>
+    </section>
+<!-- end of games section -->
+
+<!-- connect section -->   
+    <section id="connectSection" class="flex flex-col gap-y-2 w-full bg-black text-white p-[8%] lg:p-[2%_8%]">
+        <img src="./assets/logo-revofun.png" class="max-w-[200px] w-[50%] h-fit" alt="logo-revofun" title="logo-revofun">
+        
+        <div class="text-4xl">
+            <a href="https://www.instagram.com/ingesalim/" target="_blank" rel="noopener"  title="instagram byingesalim">
+            <i class="fa fa-instagram"></i></a>
+
+            <a href="https://www.linkedin.com/in/inge-salim/" target="_blank" rel="noopener" title="linkedin byingesalim">
+            <i class="fa fa-linkedin-square"></i></a>
+
+            <a href="https://www.youtube.com" target="_blank" rel="noopener" title="youtube">
+            <i class="fa fa-youtube-play"></i></a>
+
+            <a href="https://www.facebook.com" target="_blank" rel="noopener" title="facebook">
+            <i class="fa fa-facebook-f"></i></a>
+        </div>
+
+        <h4 class="text-xs">byingesalim | 2025 © all right reserved</h4><br>
+    </section>
+<!-- end of connect section -->
+
+    </main>
+    
+</body>
+
+</html>

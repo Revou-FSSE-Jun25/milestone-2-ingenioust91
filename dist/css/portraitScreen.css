@@ -1,0 +1,16 @@
+@media (orientation: portrait) {
+  body {
+    transform: rotate(90deg);
+    transform-origin: left bottom;
+    width: 90vh;
+    height: 100vw;
+    overflow-x: hidden;
+    position: fixed;
+    top : -50vh;
+  }
+
+
+.levelImg {
+    width : 30%;
+}
+}

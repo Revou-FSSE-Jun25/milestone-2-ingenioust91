@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="title" content="Revofun - The Game Developer" />
+    <meta name="description" content="Revofun is a small indie game developer dedicated to bringing short, fun, and easy-to-play browser games to busy professionals." />
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Game Developer">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Inge Salim">
+
+    <link rel="icon" type="favicon" href="./assets/favicon-revofun.png">
+    <!-- tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+    <!-- sosmed icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- <script type="module" src="suitGame.js" defer></script> -->
+</head>
+<body class="w-[100vw] h-[100vh] overflow-hidden">
+    <header id="levelHeader" class="flex-row lg:gap-x-[2%] gap-y-0">
+    </header>
+
+    <main class="invisible h-[100vh] flex flex-col items-center justify-center items-center gap-2">
+        <div class="relative p-[2%] flex items-center justify-center">
+            <img src="./assets/bubble-chat-1.png" class="absolute w-[90%] lg:w-full">
+            <h1 class="text-l size-[150%_100%] lg:text-xl lg:size-full text-center leading-none">question</h1>
+        </div>
+        
+        <section class="flex w-[50%] justify-center gap-2">
+            <img id="imgMates" src="./assets/mates-ask.png" class="w-[40%]" alt="image-dog" title="image-dog">
+            <img id="imgDog" src="./assets/anjing-kerja-1.png" class="w-[50%]" alt="image-dog" title="image-dog">
+        </section>
+
+        <div class="relative flex flex-col lg:flex-row gap-2 justify-center items-center w-full text-center leading-4">
+            <img src="./assets/bubble-chat-2.png" class=" invisible lg:visible absolute w-[70%] pointer-events-none">
+            
+            <section id="rock" class="border-1 rounded-[5px] w-[70%] lg:w-[20%] h-[50%] p-[2%] flex items-center justify-center cursor-pointer">
+                rock
+            </section>
+
+            <section id="paper" class="border-1 rounded-[5px] w-[70%] lg:w-[20%] h-[50%] p-[2%] flex items-center justify-center cursor-pointer">
+                paper
+            </section>
+
+             <section id="scissor" class="border-1 rounded-[5px] w-[70%] lg:w-[20%] h-[50%] p-[2%] flex items-center justify-center cursor-pointer">
+                scissor
+            </section>
+        </div>
+
+        <h2 id="isWin" class="text-3xl text-center"></h2>
+        <p id="timer">Time Left : -</p>
+    </main>
+</body>
+</html>
