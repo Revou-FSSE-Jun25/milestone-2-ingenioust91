@@ -25,12 +25,19 @@
 <body class="flex flex-col items-center justify-center w-screen h-sceen">
     <div class="container flex h-[80vh]">
         <div class="board draggable enabled self-end w-[100px] h-[20px] bg-black cursor-pointer"></div>
-    </div>
+        
+        <!-- yang berjatuhan -->
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+
+      </div>
 
     <div class="col w-[50dw]">
     <div class="large log row">
-      <span class="label">duration: 1000</span>
-      <span class="time-ms value lcd">0</span>
+      <span class="text-xl"><b>Time Left :</b></span>
+      <span id="countDown" class="text-3xl">60</span>
     </div>
   </div>
 </body>
