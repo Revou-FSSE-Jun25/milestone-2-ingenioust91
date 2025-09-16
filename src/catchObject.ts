@@ -4,10 +4,9 @@ createDraggable('.board.enabled', {
 });
 
 function randomX(square : any){
-    let left = square as HTMLElement
+  let left = square as HTMLElement
   const XPosition : number = Math.floor(Math.random() * ((window.innerWidth-100) - 100)+100)
   left.style.left = `${XPosition}px`;
-  console.log(XPosition)
   dropObject(left);
 }
 
@@ -19,19 +18,20 @@ function dropObject(target : HTMLElement) {
     duration: duration,
     easing: "easeInQuad",
     // loop: true
-    onComplete: function() {randomX(target)}
+    onComplete: function(){randomX(target)}
   });
 }
 
 const countDown = document.getElementById("countDown") as HTMLElement;
+const squares = document.querySelectorAll(".square");
+const catcher = document.getElementById("catcher") as HTMLElement;
 let timeLeft : number = 60;
 
 function startGame() {
-  const squares = document.querySelectorAll(".square");
-squares.forEach(function(square) {
+  squares.forEach(function(square) {
   randomX(square);})
 
-let timerId = setInterval(function(){
+  let timerId = setInterval(function(){
     countDown.textContent = timeLeft.toString();
     timeLeft--;
 
@@ -39,7 +39,16 @@ let timerId = setInterval(function(){
         clearInterval(timerId);
         countDown.textContent = "TIME'S UP!";
     }
-},1000)
+  },1000)
+}
+
+document.addEventListener("mousemove", e => {
+  const rectCatcher = catcher.getBoundingClientRect(); // untuk ambil posisi realtime catcher
+  console.log("Left:", rectCatcher .left);
+});
+
+function getScore() {
+  
 }
 
 startGame();

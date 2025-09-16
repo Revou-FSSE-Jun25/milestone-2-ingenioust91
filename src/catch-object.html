@@ -22,9 +22,9 @@
 
 </head>
 
-<body class="flex flex-col items-center justify-center w-screen h-sceen">
+<body class="flex flex-col items-center justify-center w-screen h-sceen gap-10">
     <div class="container flex h-[80vh]">
-        <div class="board draggable enabled self-end w-[100px] h-[20px] bg-black cursor-pointer"></div>
+        <div id="catcher" class="board draggable enabled self-end w-[100px] h-[20px] bg-black cursor-pointer"></div>
         
         <!-- box yg berjatuhan -->
         <div class="square"></div>
@@ -34,10 +34,15 @@
 
       </div>
 
-    <div class="col w-[50dw]">
-    <div class="large log row">
-      <span class="text-xl"><b>Time Left :</b></span>
-      <span id="countDown" class="text-3xl">60</span>
-    </div>
+    <div class="flex flex-row gap-10">
+      <div class="large log row">
+        <span class="text-xl"><b>Time Left :</b></span>
+        <span id="countDown" class="text-3xl">60</span>
+      </div>
+
+      <div class="large log row">
+        <span class="text-xl"><b>Score :</b></span>
+        <span id="score" class="text-3xl">00</span>
+      </div>
   </div>
 </body>
