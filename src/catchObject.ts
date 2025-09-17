@@ -22,10 +22,12 @@ function dropObject(target : HTMLElement,) {
 }
 
 const countDown = document.getElementById("countDown") as HTMLElement;
+const scoreText = document.getElementById("score") as HTMLElement;
 const squares = document.querySelectorAll(".square") as NodeListOf<HTMLElement>;
 const catcher = document.getElementById("catcher") as HTMLElement;
 let rectCatcher :any;
 let timeLeft : number = 60;
+let score : number = 0;
 
 function startGame() {
   squares.forEach(function(square) {
@@ -55,13 +57,16 @@ squares.forEach(square => {
 
     const collide = !(
       catcherRight < rectSquare.left ||
-      catcherLeft> rectSquare.right ||
+      catcherLeft > rectSquare.right ||
       catcherBottom < rectSquare.top ||
       catcherTop > rectSquare.bottom
     );
 
     if (collide) {
-      console.log("masuk");
+      randomX(square) //square yg ditangkep lgs dirandom lg
+      score++;
+      scoreText.textContent = score.toString()
+
     }
   });
 }

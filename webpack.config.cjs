@@ -9,7 +9,8 @@ entry : {
         suit : './src/suitGame.ts',
         number : './src/guessNumber.ts',
         clicker : './src/clickerGame.ts',
-        catch : './src/catchObject.ts'
+        catch : './src/catchObject.ts',
+        match : './src/matchPair.ts'
     },
 output : {
         filename : '[name].bundle.js', 
@@ -61,6 +62,11 @@ plugins : [
             template : './src/catch-object.html',
             filename : 'catch-object.html',
             chunks: ['catch']
+        }),
+        new HtmlWebpackPlugin({
+            template : './src/match-pair.html',
+            filename : 'match-pair.html',
+            chunks: ['match']
         }),
     // Copy static folders (css & assets) ke dist/
     new CopyWebpackPlugin({
