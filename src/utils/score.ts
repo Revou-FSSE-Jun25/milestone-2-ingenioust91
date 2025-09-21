@@ -45,6 +45,11 @@ switch (game) {
             p2.textContent = `${score}`;
         }
         break;
+        case "matchPair" :
+        {   h2.textContent = "GAME OVER! You've guess "
+            p2.textContent = `${score} card`;
+        }
+        break;
         default :
         {   h2.textContent = "GAME OVER! You've win"
             p2.textContent = `${score} arguments`;
@@ -63,6 +68,9 @@ buttonPlayAgain.addEventListener("click", function() {
         break;
         case "guessNumber" :
         {window.location.href = "guess-number.html"}
+        break;
+        case "matchPair" :
+        {window.location.href = "match-pair.html"}
         break;
         default : {window.location.href = "suit-game.html"}
     }
