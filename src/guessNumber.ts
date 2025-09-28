@@ -42,7 +42,7 @@ formGuess.addEventListener("submit", function(event):void {
 
 dogNumber.addEventListener("input", function():void {
     if (isNaN(dogNumberInput)) {
-        dogNumber.value = "";
+        dogNumber.value = "0";
     }
 
     if (dogNumberInput > 100 || dogNumberInput == 0) {
