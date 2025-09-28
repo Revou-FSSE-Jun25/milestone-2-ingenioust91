@@ -148,6 +148,38 @@ body {
     position:absolute;
 }
 
+.card {
+    position: absolute;
+    cursor: pointer;
+    width: 100px;
+    height: 150px;
+    transform-style: preserve-3d;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;       /* sisi kartu numpuk sempurna */
+    border-radius: 10%;
+}
+
+
+.cardClose {
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    backface-visibility: hidden;
+}
+
+.cardOpen {
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
 @media only screen and (max-width: 640px) {
 .levelImg {
     width : 70%;

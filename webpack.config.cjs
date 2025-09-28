@@ -4,6 +4,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 
 module.exports = {
+mode: 'production',
 entry : {
         script : './src/script.ts', //judul script: u/ chunks
         suit : './src/suitGame.ts',
