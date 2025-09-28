@@ -21,8 +21,8 @@ const numberOfChance = document.getElementById("numberOfChance") as HTMLElement;
 const clue = document.getElementById("clue") as HTMLImageElement;
 const textClue = document.getElementById("textClue") as HTMLElement;
 
-let input : string = dogNumber.value;
-let dogNumberInput : number = parseInt(input.trim());
+let input : string
+let dogNumberInput : number 
 dogNumber.value = "";
 
 function callBackLevel(level : string):void {
@@ -41,8 +41,11 @@ formGuess.addEventListener("submit", function(event):void {
 })
 
 dogNumber.addEventListener("input", function():void {
+    input = dogNumber.value;
+    dogNumberInput = parseInt(input.trim());
+    
     if (isNaN(dogNumberInput)) {
-        dogNumber.value = "0";
+        dogNumber.value = "";
     }
 
     if (dogNumberInput > 100 || dogNumberInput == 0) {
